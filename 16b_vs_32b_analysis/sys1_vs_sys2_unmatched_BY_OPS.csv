@@ -1,0 +1,27 @@
+reason,op name,device,input tensors -> output tensors,full path,sys1 total (ns),sys2 total (ns),sys1 time for 1 occurence (ns),sys1 occurences,sys2 time for 1 occurence (ns),sys2 occurences
+unique to sys2,Cast,GPU-0,0:(5x5x64x192)->(5x5x64x192) -DstT fX -SrcT fX,aggregated,0,17263.158,0,0,17263.158,1.0
+unique to sys2,RandomUniformInt,GPU-0,0:(1) 1:(1) 2:(1)->(128) -t i32 -Tout i32 -seed i: 123 -seed2 i: 21,aggregated,0,43052.632,0,0,43052.632,1.0
+unique to sys2,Cast,GPU-0,0:(384)->(384) -DstT fX -SrcT fX,aggregated,0,23394.737,0,0,11697.368,2.0
+unique to sys2,Cast,GPU-0,0:(3x3x384x384)->(3x3x384x384) -DstT fX -SrcT fX,aggregated,0,58210.526,0,0,58210.526,1.0
+unique to sys2,Cast,GPU-0,0:(256)->(256) -DstT fX -SrcT fX,aggregated,0,9842.105,0,0,9842.105,1.0
+unique to sys2,Cast,GPU-0,0:(4096)->(4096) -DstT fX -SrcT fX,aggregated,0,23447.368,0,0,11723.684,2.0
+unique to sys2,RandomUniform,GPU-0,0:(2)->(128x4096) -t i32 -t fX -seed i: 123 -seed2 i: 161,aggregated,0,52210.526,0,0,52210.526,1.0
+unique to sys2,Identity,CPU-0,0:(1)->(1) -t fX,aggregated,0,1184.211,0,0,1184.211,1.0
+unique to sys2,Cast,GPU-0,0:(4096x1001)->(4096x1001) -DstT fX -SrcT fX,aggregated,0,172657.895,0,0,172657.895,1.0
+unique to sys2,Cast,GPU-0,0:(64)->(64) -DstT fX -SrcT fX,aggregated,0,11052.632,0,0,11052.632,1.0
+unique to sys2,Cast,GPU-0,0:(11x11x3x64)->(11x11x3x64) -DstT fX -SrcT fX,aggregated,0,10131.579,0,0,10131.579,1.0
+unique to sys2,Cast,GPU-0,0:(3x3x384x256)->(3x3x384x256) -DstT fX -SrcT fX,aggregated,0,42157.895,0,0,42157.895,1.0
+unique to sys2,VariableV2,CPU-0,0:(none)->(1) -t fX,aggregated,0,9184.211,0,0,9184.211,1.0
+unique to sys2,Cast,GPU-0,0:(1001)->(1001) -DstT fX -SrcT fX,aggregated,0,10289.474,0,0,10289.474,1.0
+unique to sys2,Cast,GPU-0,0:(4096x4096)->(4096x4096) -DstT fX -SrcT fX,aggregated,0,681631.579,0,0,681631.579,1.0
+unique to sys2,RandomUniform,GPU-0,0:(2)->(128x4096) -t i32 -t fX -seed i: 123 -seed2 i: 191,aggregated,0,55763.158,0,0,55763.158,1.0
+unique to sys2,Cast,GPU-0,0:(192)->(192) -DstT fX -SrcT fX,aggregated,0,10078.947,0,0,10078.947,1.0
+unique to sys2,Cast,GPU-0,0:(9216x4096)->(9216x4096) -DstT fX -SrcT fX,aggregated,0,1527921.053,0,0,1527921.053,1.0
+unique to sys2,Cast,GPU-0,0:(128x1001)->(128x1001) -DstT fX -SrcT fX,aggregated,0,12342.105,0,0,12342.105,1.0
+unique to sys2,Reciprocal,GPU-0,0:(1)->(1) -t fX,aggregated,0,168289.474,0,0,168289.474,1.0
+unique to sys2,Tile,GPU-0,0:(1) 1:(1)->(128) -t fX -Tmultiples i32,aggregated,0,36684.211,0,0,36684.211,1.0
+unique to sys2,Cast,GPU-0,0:(3x3x192x384)->(3x3x192x384) -DstT fX -SrcT fX,aggregated,0,32368.421,0,0,32368.421,1.0
+unique to sys1,RandomUniform,GPU-0,0:(2)->(128x4096) -t i32 -t fX -seed i: 123 -seed2 i: 144,aggregated,27631.579,0,27631.579,1.0,0,0
+unique to sys1,RandomUniform,GPU-0,0:(2)->(128x4096) -t i32 -t fX -seed i: 123 -seed2 i: 172,aggregated,30552.632,0,30552.632,1.0,0,0
+unique to sys1,RandomUniformInt,GPU-0,0:(1) 1:(1) 2:(1)->(128) -t i32 -Tout i32 -seed i: 123 -seed2 i: 16,aggregated,89973.684,0,89973.684,1.0,0,0
+unique to sys1,Const,GPU-0,0:(none)->(128) -t fX -Tdim i32,aggregated,1447.368,0,1447.368,1.0,0,0

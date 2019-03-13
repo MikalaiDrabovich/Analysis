@@ -1,0 +1,157 @@
+reason,op name,device,input tensors -> output tensors,full path,sys1 total (ns),sys2 total (ns),sys1 time for 1 occurence (ns),sys1 occurences,sys2 time for 1 occurence (ns),sys2 occurences
+unique to sys2,Identity,GPU-0,0:(128x227x227x3)->(128x227x227x3) -t f16,aggregated,0,723.684,0,0,723.684,1.0
+unique to sys2,MatMul,GPU-0,0:(128x1001) 1:(4096x1001)->(128x4096) -t f16 -tr_a 0 -tr_b 1,aggregated,0,331710.526,0,0,331710.526,1.0
+unique to sys2,Identity,CPU-0,0:(1)->(1) -t f32,aggregated,0,1184.211,0,0,1184.211,1.0
+unique to sys2,BiasAddGrad,GPU-0,0:(128x192x27x27)->(192) -t f16 -data_format NHWC,aggregated,0,607894.737,0,0,607894.737,1.0
+unique to sys2,MaxPool,GPU-0,0:(128x256x13x13)->(128x256x6x6) -t f16 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,0,263263.158,0,0,263263.158,1.0
+unique to sys2,VariableV2,CPU-0,0:(none)->(1) -t f32,aggregated,0,9184.211,0,0,9184.211,1.0
+unique to sys2,Cast,GPU-0,0:(3x3x384x384)->(3x3x384x384) -DstT f32 -SrcT f16,aggregated,0,65342.105,0,0,65342.105,1.0
+unique to sys2,Cast,GPU-0,0:(64)->(64) -DstT f32 -SrcT f16,aggregated,0,11052.632,0,0,11052.632,1.0
+unique to sys2,Cast,GPU-0,0:(192)->(192) -DstT f32 -SrcT f16,aggregated,0,12947.368,0,0,12947.368,1.0
+unique to sys2,Conv2DBackpropInput,GPU-0,0:(4) 1:(3x3x192x384) 2:(128x384x13x13)->(128x192x13x13) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,4844894.737,0,0,4844894.737,1.0
+unique to sys2,Cast,GPU-0,0:(5x5x64x192)->(5x5x64x192) -DstT f16 -SrcT f32,aggregated,0,17263.158,0,0,17263.158,1.0
+unique to sys2,MatMul,GPU-0,0:(128x4096) 1:(128x4096)->(4096x4096) -t f16 -tr_a 1 -tr_b 0,aggregated,0,1300263.158,0,0,1300263.158,1.0
+unique to sys2,Relu,GPU-0,0:(128x384x13x13)->(128x384x13x13) -t f16,aggregated,0,470789.474,0,0,235394.737,2.0
+unique to sys2,Cast,GPU-0,0:(9216x4096)->(9216x4096) -DstT f16 -SrcT f32,aggregated,0,1527921.053,0,0,1527921.053,1.0
+unique to sys2,Conv2D,GPU-0,0:(128x192x13x13) 1:(3x3x192x384)->(128x384x13x13) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,5337473.684,0,0,5337473.684,1.0
+unique to sys2,ReluGrad,GPU-0,0:(128x64x55x55) 1:(128x64x55x55)->(128x64x55x55) -t f16,aggregated,0,1544947.368,0,0,1544947.368,1.0
+unique to sys2,Cast,GPU-0,0:(192)->(192) -DstT f16 -SrcT f32,aggregated,0,10078.947,0,0,10078.947,1.0
+unique to sys2,Relu,GPU-0,0:(128x4096)->(128x4096) -t f16,aggregated,0,27026.316,0,0,13513.158,2.0
+unique to sys2,Cast,GPU-0,0:(4096)->(4096) -DstT f32 -SrcT f16,aggregated,0,23447.368,0,0,11723.684,2.0
+unique to sys2,ReluGrad,GPU-0,0:(128x4096) 1:(128x4096)->(128x4096) -t f16,aggregated,0,95894.737,0,0,47947.368,2.0
+unique to sys2,Cast,GPU-0,0:(384)->(384) -DstT f32 -SrcT f16,aggregated,0,25026.316,0,0,12513.158,2.0
+unique to sys2,Conv2DBackpropFilter,GPU-0,0:(128x3x227x227) 1:(4) 2:(128x64x55x55)->(11x11x3x64) -t f16 -data_format NHWC -strides list { i: 1 i: 4 i: 4 i: 1} -cudnn 1,aggregated,0,6753421.053,0,0,6753421.053,1.0
+unique to sys2,Relu,GPU-0,0:(128x256x13x13)->(128x256x13x13) -t f16,aggregated,0,158605.263,0,0,158605.263,1.0
+unique to sys2,Conv2D,GPU-0,0:(128x64x27x27) 1:(5x5x64x192)->(128x192x27x27) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,5064131.579,0,0,5064131.579,1.0
+unique to sys2,MaxPoolGrad,GPU-0,0:(128x64x55x55) 1:(128x64x27x27) 2:(128x64x27x27)->(128x64x55x55) -t f16 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,0,1402078.947,0,0,1402078.947,1.0
+unique to sys2,MaxPoolGrad,GPU-0,0:(128x256x13x13) 1:(128x256x6x6) 2:(128x256x6x6)->(128x256x13x13) -t f16 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,0,837131.579,0,0,837131.579,1.0
+unique to sys2,Cast,GPU-0,0:(3x3x192x384)->(3x3x192x384) -DstT f32 -SrcT f16,aggregated,0,36552.632,0,0,36552.632,1.0
+unique to sys2,BiasAddGrad,GPU-0,0:(128x256x13x13)->(256) -t f16 -data_format NHWC,aggregated,0,215736.842,0,0,215736.842,1.0
+unique to sys2,Cast,GPU-0,0:(128x1001)->(128x1001) -DstT f16 -SrcT f32,aggregated,0,12342.105,0,0,12342.105,1.0
+unique to sys2,MatMul,GPU-0,0:(128x4096) 1:(4096x1001)->(128x1001) -t f16 -tr_a 0 -tr_b 0,aggregated,0,329894.737,0,0,329894.737,1.0
+unique to sys2,Cast,GPU-0,0:(3x3x384x256)->(3x3x384x256) -DstT f32 -SrcT f16,aggregated,0,46342.105,0,0,46342.105,1.0
+unique to sys2,Conv2DBackpropInput,GPU-0,0:(4) 1:(5x5x64x192) 2:(128x192x27x27)->(128x64x27x27) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,4236789.474,0,0,4236789.474,1.0
+unique to sys2,Cast,GPU-0,0:(256)->(256) -DstT f32 -SrcT f16,aggregated,0,11842.105,0,0,11842.105,1.0
+unique to sys2,Cast,GPU-0,0:(384)->(384) -DstT f16 -SrcT f32,aggregated,0,23394.737,0,0,11697.368,2.0
+unique to sys2,Cast,GPU-0,0:(4096x1001)->(4096x1001) -DstT f16 -SrcT f32,aggregated,0,172657.895,0,0,172657.895,1.0
+unique to sys2,BiasAdd,GPU-0,0:(128x192x27x27) 1:(192)->(128x192x27x27) -t f16 -data_format NHWC,aggregated,0,1678868.421,0,0,1678868.421,1.0
+unique to sys2,BiasAdd,GPU-0,0:(128x64x55x55) 1:(64)->(128x64x55x55) -t f16 -data_format NHWC,aggregated,0,1627289.474,0,0,1627289.474,1.0
+unique to sys2,BiasAdd,GPU-0,0:(128x256x13x13) 1:(256)->(128x256x13x13) -t f16 -data_format NHWC,aggregated,0,352763.158,0,0,352763.158,1.0
+unique to sys2,MatMul,GPU-0,0:(128x4096) 1:(4096x4096)->(128x4096) -t f16 -tr_a 0 -tr_b 0,aggregated,0,1110157.895,0,0,1110157.895,1.0
+unique to sys2,Reciprocal,GPU-0,0:(1)->(1) -t f32,aggregated,0,168289.474,0,0,168289.474,1.0
+unique to sys2,Cast,GPU-0,0:(4096)->(4096) -DstT f16 -SrcT f32,aggregated,0,73947.368,0,0,36973.684,2.0
+unique to sys2,Conv2D,GPU-0,0:(128x384x13x13) 1:(3x3x384x256)->(128x256x13x13) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,5867473.684,0,0,5867473.684,1.0
+unique to sys2,BiasAddGrad,GPU-0,0:(128x384x13x13)->(384) -t f16 -data_format NHWC,aggregated,0,616236.842,0,0,308118.421,2.0
+unique to sys2,Add,GPU-0,0:(1) 1:(128x4096)->(128x4096) -t f16,aggregated,0,56578.947,0,0,28289.474,2.0
+unique to sys2,Cast,GPU-0,0:(1001)->(1001) -DstT f16 -SrcT f32,aggregated,0,64473.684,0,0,64473.684,1.0
+unique to sys2,Cast,GPU-0,0:(11x11x3x64)->(11x11x3x64) -DstT f32 -SrcT f16,aggregated,0,10131.579,0,0,10131.579,1.0
+unique to sys2,Cast,GPU-0,0:(128x1001)->(128x1001) -DstT f32 -SrcT f16,aggregated,0,13394.737,0,0,13394.737,1.0
+unique to sys2,ReluGrad,GPU-0,0:(128x192x27x27) 1:(128x192x27x27)->(128x192x27x27) -t f16,aggregated,0,1113315.789,0,0,1113315.789,1.0
+unique to sys2,Conv2D,GPU-0,0:(128x384x13x13) 1:(3x3x384x384)->(128x384x13x13) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,8366684.211,0,0,8366684.211,1.0
+unique to sys2,Cast,GPU-0,0:(3x3x384x256)->(3x3x384x256) -DstT f16 -SrcT f32,aggregated,0,42157.895,0,0,42157.895,1.0
+unique to sys2,Cast,GPU-0,0:(4096x4096)->(4096x4096) -DstT f16 -SrcT f32,aggregated,0,681631.579,0,0,681631.579,1.0
+unique to sys2,RandomUniform,GPU-0,0:(2)->(128x4096) -t i32 -t f16 -seed i: 123 -seed2 i: 191,aggregated,0,55763.158,0,0,55763.158,1.0
+unique to sys2,Relu,GPU-0,0:(128x192x27x27)->(128x192x27x27) -t f16,aggregated,0,597026.316,0,0,597026.316,1.0
+unique to sys2,Conv2DBackpropFilter,GPU-0,0:(128x384x13x13) 1:(4) 2:(128x256x13x13)->(3x3x384x256) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,5662315.789,0,0,5662315.789,1.0
+unique to sys2,MatMul,GPU-0,0:(128x4096) 1:(4096x4096)->(128x4096) -t f16 -tr_a 0 -tr_b 1,aggregated,0,1229131.579,0,0,1229131.579,1.0
+unique to sys2,MaxPool,GPU-0,0:(128x64x55x55)->(128x64x27x27) -t f16 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,0,1143289.474,0,0,1143289.474,1.0
+unique to sys2,MaxPoolGrad,GPU-0,0:(128x192x27x27) 1:(128x192x13x13) 2:(128x192x13x13)->(128x192x27x27) -t f16 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,0,1223684.211,0,0,1223684.211,1.0
+unique to sys2,Cast,GPU-0,0:(1001)->(1001) -DstT f32 -SrcT f16,aggregated,0,10289.474,0,0,10289.474,1.0
+unique to sys2,BiasAddGrad,GPU-0,0:(128x64x55x55)->(64) -t f16 -data_format NHWC,aggregated,0,895763.158,0,0,895763.158,1.0
+unique to sys2,Tile,GPU-0,0:(1) 1:(1)->(128) -t f32 -Tmultiples i32,aggregated,0,36684.211,0,0,36684.211,1.0
+unique to sys2,Conv2DBackpropFilter,GPU-0,0:(128x384x13x13) 1:(4) 2:(128x384x13x13)->(3x3x384x384) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,8113526.316,0,0,8113526.316,1.0
+unique to sys2,MaxPool,GPU-0,0:(128x192x27x27)->(128x192x13x13) -t f16 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,0,852473.684,0,0,852473.684,1.0
+unique to sys2,Conv2DBackpropFilter,GPU-0,0:(128x64x27x27) 1:(4) 2:(128x192x27x27)->(5x5x64x192) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,4839842.105,0,0,4839842.105,1.0
+unique to sys2,Mul,GPU-0,0:(128x4096) 1:(128x4096)->(128x4096) -t f16,aggregated,0,125736.842,0,0,31434.211,4.0
+unique to sys2,BiasAddGrad,GPU-0,0:(128x4096)->(4096) -t f16 -data_format NHWC,aggregated,0,109105.263,0,0,54552.632,2.0
+unique to sys2,MatMul,GPU-0,0:(128x4096) 1:(9216x4096)->(128x9216) -t f16 -tr_a 0 -tr_b 1,aggregated,0,2669394.737,0,0,2669394.737,1.0
+unique to sys2,MatMul,GPU-0,0:(128x9216) 1:(128x4096)->(9216x4096) -t f16 -tr_a 1 -tr_b 0,aggregated,0,2895026.316,0,0,2895026.316,1.0
+unique to sys2,Cast,GPU-0,0:(11x11x3x64)->(11x11x3x64) -DstT f16 -SrcT f32,aggregated,0,25605.263,0,0,25605.263,1.0
+unique to sys2,VariableV2,GPU-0,0:(none)->(128x227x227x3) -t f16,aggregated,0,1763.158,0,0,1763.158,1.0
+unique to sys2,Cast,GPU-0,0:(4096x4096)->(4096x4096) -DstT f32 -SrcT f16,aggregated,0,763736.842,0,0,763736.842,1.0
+unique to sys2,Relu,GPU-0,0:(128x64x55x55)->(128x64x55x55) -t f16,aggregated,0,690710.526,0,0,690710.526,1.0
+unique to sys2,BiasAdd,GPU-0,0:(128x4096) 1:(4096)->(128x4096) -t f16 -data_format NHWC,aggregated,0,86131.579,0,0,43065.789,2.0
+unique to sys2,Cast,GPU-0,0:(9216x4096)->(9216x4096) -DstT f32 -SrcT f16,aggregated,0,1808210.526,0,0,1808210.526,1.0
+unique to sys2,Cast,GPU-0,0:(5x5x64x192)->(5x5x64x192) -DstT f32 -SrcT f16,aggregated,0,21605.263,0,0,21605.263,1.0
+unique to sys2,Floor,GPU-0,0:(128x4096)->(128x4096) -t f16,aggregated,0,56315.789,0,0,28157.895,2.0
+unique to sys2,BiasAdd,GPU-0,0:(128x384x13x13) 1:(384)->(128x384x13x13) -t f16 -data_format NHWC,aggregated,0,1069763.158,0,0,534881.579,2.0
+unique to sys2,Cast,GPU-0,0:(3x3x192x384)->(3x3x192x384) -DstT f16 -SrcT f32,aggregated,0,32368.421,0,0,32368.421,1.0
+unique to sys2,Const,GPU-0,0:(none)->(1) -t f16,aggregated,0,1263.158,0,0,1263.158,1.0
+unique to sys2,Conv2DBackpropInput,GPU-0,0:(4) 1:(3x3x384x256) 2:(128x256x13x13)->(128x384x13x13) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,5968789.474,0,0,5968789.474,1.0
+unique to sys2,MatMul,GPU-0,0:(128x9216) 1:(9216x4096)->(128x4096) -t f16 -tr_a 0 -tr_b 0,aggregated,0,2469026.316,0,0,2469026.316,1.0
+unique to sys2,Cast,GPU-0,0:(3x3x384x384)->(3x3x384x384) -DstT f16 -SrcT f32,aggregated,0,58210.526,0,0,58210.526,1.0
+unique to sys2,RandomUniformInt,GPU-0,0:(1) 1:(1) 2:(1)->(128) -t i32 -Tout i32 -seed i: 123 -seed2 i: 21,aggregated,0,43052.632,0,0,43052.632,1.0
+unique to sys2,RandomUniform,GPU-0,0:(2)->(128x4096) -t i32 -t f16 -seed i: 123 -seed2 i: 161,aggregated,0,52210.526,0,0,52210.526,1.0
+unique to sys2,Conv2DBackpropInput,GPU-0,0:(4) 1:(3x3x384x384) 2:(128x384x13x13)->(128x384x13x13) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,8293473.684,0,0,8293473.684,1.0
+unique to sys2,ReluGrad,GPU-0,0:(128x256x13x13) 1:(128x256x13x13)->(128x256x13x13) -t f16,aggregated,0,355078.947,0,0,355078.947,1.0
+unique to sys2,BiasAddGrad,GPU-0,0:(128x1001)->(1001) -t f16 -data_format NHWC,aggregated,0,35500.0,0,0,35500.0,1.0
+unique to sys2,Conv2D,GPU-0,0:(128x3x227x227) 1:(11x11x3x64)->(128x64x55x55) -t f16 -data_format NHWC -strides list { i: 1 i: 4 i: 4 i: 1} -cudnn 1,aggregated,0,5859684.211,0,0,5859684.211,1.0
+unique to sys2,Cast,GPU-0,0:(64)->(64) -DstT f16 -SrcT f32,aggregated,0,12578.947,0,0,12578.947,1.0
+unique to sys2,Mul,GPU-0,0:(1) 1:(128x4096)->(128x4096) -t f16,aggregated,0,116815.789,0,0,29203.947,4.0
+unique to sys2,Cast,GPU-0,0:(4096x1001)->(4096x1001) -DstT f32 -SrcT f16,aggregated,0,180526.316,0,0,180526.316,1.0
+unique to sys2,MatMul,GPU-0,0:(128x4096) 1:(128x1001)->(4096x1001) -t f16 -tr_a 1 -tr_b 0,aggregated,0,341421.053,0,0,341421.053,1.0
+unique to sys2,BiasAdd,GPU-0,0:(128x1001) 1:(1001)->(128x1001) -t f16 -data_format NHWC,aggregated,0,18394.737,0,0,18394.737,1.0
+unique to sys2,Cast,GPU-0,0:(256)->(256) -DstT f16 -SrcT f32,aggregated,0,9842.105,0,0,9842.105,1.0
+unique to sys2,Conv2DBackpropFilter,GPU-0,0:(128x192x13x13) 1:(4) 2:(128x384x13x13)->(3x3x192x384) -t f16 -data_format NHWC -p s -cudnn 1,aggregated,0,5339710.526,0,0,5339710.526,1.0
+unique to sys2,ReluGrad,GPU-0,0:(128x384x13x13) 1:(128x384x13x13)->(128x384x13x13) -t f16,aggregated,0,1046947.368,0,0,523473.684,2.0
+unique to sys1,MaxPool,GPU-0,0:(128x256x13x13)->(128x256x6x6) -t f32 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,288868.421,0,288868.421,1.0,0,0
+unique to sys1,ReluGrad,GPU-0,0:(128x64x55x55) 1:(128x64x55x55)->(128x64x55x55) -t f32,aggregated,1918631.579,0,1918631.579,1.0,0,0
+unique to sys1,Conv2DBackpropInput,GPU-0,0:(4) 1:(3x3x192x384) 2:(128x384x13x13)->(128x192x13x13) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,5014578.947,0,5014578.947,1.0,0,0
+unique to sys1,BiasAdd,GPU-0,0:(128x192x27x27) 1:(192)->(128x192x27x27) -t f32 -data_format NHWC,aggregated,1262631.579,0,1262631.579,1.0,0,0
+unique to sys1,MatMul,GPU-0,0:(128x4096) 1:(4096x4096)->(128x4096) -t f32 -tr_a 0 -tr_b 1,aggregated,1388631.579,0,1388631.579,1.0,0,0
+unique to sys1,BiasAdd,GPU-0,0:(128x256x13x13) 1:(256)->(128x256x13x13) -t f32 -data_format NHWC,aggregated,372736.842,0,372736.842,1.0,0,0
+unique to sys1,BiasAddGrad,GPU-0,0:(128x4096)->(4096) -t f32 -data_format NHWC,aggregated,74657.895,0,37328.947,2.0,0,0
+unique to sys1,Const,GPU-0,0:(none)->(128) -t f32 -Tdim i32,aggregated,1447.368,0,1447.368,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(128x227x227x3) -t f32,aggregated,1842.105,0,1842.105,1.0,0,0
+unique to sys1,BiasAdd,GPU-0,0:(128x64x55x55) 1:(64)->(128x64x55x55) -t f32 -data_format NHWC,aggregated,1627684.211,0,1627684.211,1.0,0,0
+unique to sys1,BiasAddGrad,GPU-0,0:(128x64x55x55)->(64) -t f32 -data_format NHWC,aggregated,650447.368,0,650447.368,1.0,0,0
+unique to sys1,BiasAddGrad,GPU-0,0:(128x384x13x13)->(384) -t f32 -data_format NHWC,aggregated,515394.737,0,257697.368,2.0,0,0
+unique to sys1,RandomUniform,GPU-0,0:(2)->(128x4096) -t i32 -t f32 -seed i: 123 -seed2 i: 144,aggregated,27631.579,0,27631.579,1.0,0,0
+unique to sys1,MatMul,GPU-0,0:(128x4096) 1:(128x1001)->(4096x1001) -t f32 -tr_a 1 -tr_b 0,aggregated,342657.895,0,342657.895,1.0,0,0
+unique to sys1,Conv2D,GPU-0,0:(128x64x27x27) 1:(5x5x64x192)->(128x192x27x27) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,4721526.316,0,4721526.316,1.0,0,0
+unique to sys1,Conv2DBackpropInput,GPU-0,0:(4) 1:(3x3x384x384) 2:(128x384x13x13)->(128x384x13x13) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,9093394.737,0,9093394.737,1.0,0,0
+unique to sys1,MatMul,GPU-0,0:(128x4096) 1:(128x4096)->(4096x4096) -t f32 -tr_a 1 -tr_b 0,aggregated,1254421.053,0,1254421.053,1.0,0,0
+unique to sys1,Floor,GPU-0,0:(128x4096)->(128x4096) -t f32,aggregated,77473.684,0,38736.842,2.0,0,0
+unique to sys1,Identity,GPU-0,0:(128x227x227x3)->(128x227x227x3) -t f32,aggregated,776.316,0,776.316,1.0,0,0
+unique to sys1,MaxPool,GPU-0,0:(128x192x27x27)->(128x192x13x13) -t f32 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,1411078.947,0,1411078.947,1.0,0,0
+unique to sys1,BiasAdd,GPU-0,0:(128x1001) 1:(1001)->(128x1001) -t f32 -data_format NHWC,aggregated,15500.0,0,15500.0,1.0,0,0
+unique to sys1,Relu,GPU-0,0:(128x4096)->(128x4096) -t f32,aggregated,74447.368,0,37223.684,2.0,0,0
+unique to sys1,Mul,GPU-0,0:(128x4096) 1:(128x4096)->(128x4096) -t f32,aggregated,205921.053,0,51480.263,4.0,0,0
+unique to sys1,Conv2DBackpropFilter,GPU-0,0:(128x192x13x13) 1:(4) 2:(128x384x13x13)->(3x3x192x384) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,5761447.368,0,5761447.368,1.0,0,0
+unique to sys1,MaxPoolGrad,GPU-0,0:(128x192x27x27) 1:(128x192x13x13) 2:(128x192x13x13)->(128x192x27x27) -t f32 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,1267842.105,0,1267842.105,1.0,0,0
+unique to sys1,MaxPool,GPU-0,0:(128x64x55x55)->(128x64x27x27) -t f32 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,1232894.737,0,1232894.737,1.0,0,0
+unique to sys1,Conv2DBackpropInput,GPU-0,0:(4) 1:(3x3x384x256) 2:(128x256x13x13)->(128x384x13x13) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,6253631.579,0,6253631.579,1.0,0,0
+unique to sys1,MatMul,GPU-0,0:(128x4096) 1:(4096x1001)->(128x1001) -t f32 -tr_a 0 -tr_b 0,aggregated,376605.263,0,376605.263,1.0,0,0
+unique to sys1,Conv2D,GPU-0,0:(128x384x13x13) 1:(3x3x384x384)->(128x384x13x13) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,8889000.0,0,8889000.0,1.0,0,0
+unique to sys1,RandomUniform,GPU-0,0:(2)->(128x4096) -t i32 -t f32 -seed i: 123 -seed2 i: 172,aggregated,30552.632,0,30552.632,1.0,0,0
+unique to sys1,Conv2D,GPU-0,0:(128x384x13x13) 1:(3x3x384x256)->(128x256x13x13) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,6164973.684,0,6164973.684,1.0,0,0
+unique to sys1,BiasAdd,GPU-0,0:(128x384x13x13) 1:(384)->(128x384x13x13) -t f32 -data_format NHWC,aggregated,1122236.842,0,561118.421,2.0,0,0
+unique to sys1,MatMul,GPU-0,0:(128x9216) 1:(9216x4096)->(128x4096) -t f32 -tr_a 0 -tr_b 0,aggregated,3044263.158,0,3044263.158,1.0,0,0
+unique to sys1,Relu,GPU-0,0:(128x384x13x13)->(128x384x13x13) -t f32,aggregated,887894.737,0,443947.368,2.0,0,0
+unique to sys1,BiasAddGrad,GPU-0,0:(128x1001)->(1001) -t f32 -data_format NHWC,aggregated,23368.421,0,23368.421,1.0,0,0
+unique to sys1,Relu,GPU-0,0:(128x192x27x27)->(128x192x27x27) -t f32,aggregated,1542394.737,0,1542394.737,1.0,0,0
+unique to sys1,ReluGrad,GPU-0,0:(128x192x27x27) 1:(128x192x27x27)->(128x192x27x27) -t f32,aggregated,1389578.947,0,1389578.947,1.0,0,0
+unique to sys1,BiasAddGrad,GPU-0,0:(128x256x13x13)->(256) -t f32 -data_format NHWC,aggregated,189421.053,0,189421.053,1.0,0,0
+unique to sys1,MatMul,GPU-0,0:(128x1001) 1:(4096x1001)->(128x4096) -t f32 -tr_a 0 -tr_b 1,aggregated,376315.789,0,376315.789,1.0,0,0
+unique to sys1,BiasAdd,GPU-0,0:(128x4096) 1:(4096)->(128x4096) -t f32 -data_format NHWC,aggregated,81078.947,0,40539.474,2.0,0,0
+unique to sys1,Add,GPU-0,0:(1) 1:(128x4096)->(128x4096) -t f32,aggregated,77131.579,0,38565.789,2.0,0,0
+unique to sys1,MaxPoolGrad,GPU-0,0:(128x64x55x55) 1:(128x64x27x27) 2:(128x64x27x27)->(128x64x55x55) -t f32 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,2115815.789,0,2115815.789,1.0,0,0
+unique to sys1,Conv2DBackpropFilter,GPU-0,0:(128x64x27x27) 1:(4) 2:(128x192x27x27)->(5x5x64x192) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,5069289.474,0,5069289.474,1.0,0,0
+unique to sys1,RandomUniformInt,GPU-0,0:(1) 1:(1) 2:(1)->(128) -t i32 -Tout i32 -seed i: 123 -seed2 i: 16,aggregated,89973.684,0,89973.684,1.0,0,0
+unique to sys1,Mul,GPU-0,0:(1) 1:(128x4096)->(128x4096) -t f32,aggregated,161605.263,0,40401.316,4.0,0,0
+unique to sys1,ReluGrad,GPU-0,0:(128x384x13x13) 1:(128x384x13x13)->(128x384x13x13) -t f32,aggregated,1294789.474,0,647394.737,2.0,0,0
+unique to sys1,Conv2DBackpropInput,GPU-0,0:(4) 1:(5x5x64x192) 2:(128x192x27x27)->(128x64x27x27) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,4493921.053,0,4493921.053,1.0,0,0
+unique to sys1,Conv2DBackpropFilter,GPU-0,0:(128x384x13x13) 1:(4) 2:(128x384x13x13)->(3x3x384x384) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,8768868.421,0,8768868.421,1.0,0,0
+unique to sys1,Relu,GPU-0,0:(128x64x55x55)->(128x64x55x55) -t f32,aggregated,1303526.316,0,1303526.316,1.0,0,0
+unique to sys1,Relu,GPU-0,0:(128x256x13x13)->(128x256x13x13) -t f32,aggregated,298710.526,0,298710.526,1.0,0,0
+unique to sys1,ReluGrad,GPU-0,0:(128x256x13x13) 1:(128x256x13x13)->(128x256x13x13) -t f32,aggregated,438157.895,0,438157.895,1.0,0,0
+unique to sys1,Conv2DBackpropFilter,GPU-0,0:(128x384x13x13) 1:(4) 2:(128x256x13x13)->(3x3x384x256) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,6082526.316,0,6082526.316,1.0,0,0
+unique to sys1,MaxPoolGrad,GPU-0,0:(128x256x13x13) 1:(128x256x6x6) 2:(128x256x6x6)->(128x256x13x13) -t f32 -data_format NHWC -ksize list { i: 1 i: 3 i: 3 i: 1} -strides 1 2 2 1,aggregated,820736.842,0,820736.842,1.0,0,0
+unique to sys1,Conv2D,GPU-0,0:(128x3x227x227) 1:(11x11x3x64)->(128x64x55x55) -t f32 -data_format NHWC -strides list { i: 1 i: 4 i: 4 i: 1} -cudnn 1,aggregated,6464631.579,0,6464631.579,1.0,0,0
+unique to sys1,MatMul,GPU-0,0:(128x4096) 1:(4096x4096)->(128x4096) -t f32 -tr_a 0 -tr_b 0,aggregated,1366078.947,0,1366078.947,1.0,0,0
+unique to sys1,ReluGrad,GPU-0,0:(128x4096) 1:(128x4096)->(128x4096) -t f32,aggregated,102315.789,0,51157.895,2.0,0,0
+unique to sys1,Conv2DBackpropFilter,GPU-0,0:(128x3x227x227) 1:(4) 2:(128x64x55x55)->(11x11x3x64) -t f32 -data_format NHWC -strides list { i: 1 i: 4 i: 4 i: 1} -cudnn 1,aggregated,7122000.0,0,7122000.0,1.0,0,0
+unique to sys1,Conv2D,GPU-0,0:(128x192x13x13) 1:(3x3x192x384)->(128x384x13x13) -t f32 -data_format NHWC -p s -cudnn 1,aggregated,6069500.0,0,6069500.0,1.0,0,0
+unique to sys1,BiasAddGrad,GPU-0,0:(128x192x27x27)->(192) -t f32 -data_format NHWC,aggregated,484684.211,0,484684.211,1.0,0,0
+unique to sys1,MatMul,GPU-0,0:(128x4096) 1:(9216x4096)->(128x9216) -t f32 -tr_a 0 -tr_b 1,aggregated,2793763.158,0,2793763.158,1.0,0,0
+unique to sys1,MatMul,GPU-0,0:(128x9216) 1:(128x4096)->(9216x4096) -t f32 -tr_a 1 -tr_b 0,aggregated,2799684.211,0,2799684.211,1.0,0,0

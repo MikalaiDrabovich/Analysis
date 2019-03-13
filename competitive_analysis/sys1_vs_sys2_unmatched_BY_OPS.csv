@@ -1,0 +1,41 @@
+reason,op name,device,input tensors -> output tensors,full path,sys1 total (ns),sys2 total (ns),sys1 time for 1 occurence (ns),sys1 occurences,sys2 time for 1 occurence (ns),sys2 occurences
+unique to sys2,MEMCPYDtoH,GPU-0,(Transfer)->(4 bytes),aggregated,0,1000.0,0,0,1000.0,1.0
+unique to sys1,VariableV2,GPU-0,0:(none)->(3x3x384x384) -t f32,aggregated,1578.947,0,1578.947,1.0,0,0
+unique to sys1,Const,GPU-0,0:(none)->(1) -t i32,aggregated,3223.684,0,805.921,4.0,0,0
+unique to sys1,Identity,GPU-0,0:(384)->(384) -t f32,aggregated,1447.368,0,723.684,2.0,0,0
+unique to sys1,NoOp,GPU-0,0:(none)->(none),aggregated,6736.842,0,1347.368,5.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(11x11x3x64) -t f32,aggregated,1631.579,0,1631.579,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(192) -t f32,aggregated,1263.158,0,1263.158,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(3x3x192x384) -t f32,aggregated,1605.263,0,1605.263,1.0,0,0
+unique to sys1,Mean,GPU-0,0:(1) 1:(1)->(1) -t f32 -Tidx i32 -keep_dims b: 0,aggregated,2000.0,0,2000.0,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(5x5x64x192) -t f32,aggregated,1684.211,0,1684.211,1.0,0,0
+unique to sys1,Identity,GPU-0,0:(4096x1001)->(4096x1001) -t f32,aggregated,881.579,0,881.579,1.0,0,0
+unique to sys1,Identity,GPU-0,0:(1001)->(1001) -t f32,aggregated,986.842,0,986.842,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(128x227x227x3) -t f32,aggregated,1842.105,0,1842.105,1.0,0,0
+unique to sys1,Identity,GPU-0,0:(4096)->(4096) -t f32,aggregated,1710.526,0,855.263,2.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(4096) -t f32,aggregated,3052.632,0,1526.316,2.0,0,0
+unique to sys1,Identity,GPU-0,0:(5x5x64x192)->(5x5x64x192) -t f32,aggregated,710.526,0,710.526,1.0,0,0
+unique to sys1,Identity,GPU-0,0:(3x3x384x256)->(3x3x384x256) -t f32,aggregated,710.526,0,710.526,1.0,0,0
+unique to sys1,Const,GPU-0,0:(none)->(1),aggregated,5197.368,0,1299.342,4.0,0,0
+unique to sys1,Identity,GPU-0,0:(128x227x227x3)->(128x227x227x3) -t f32,aggregated,776.316,0,776.316,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(1001) -t f32,aggregated,3578.947,0,3578.947,1.0,0,0
+unique to sys1,Identity,GPU-0,0:(64)->(64) -t f32,aggregated,776.316,0,776.316,1.0,0,0
+unique to sys1,Identity,GPU-0,0:(256)->(256) -t f32,aggregated,710.526,0,710.526,1.0,0,0
+unique to sys1,Const,GPU-0,0:(none)->(4) -t i32,aggregated,776.316,0,776.316,1.0,0,0
+unique to sys1,Identity,GPU-0,0:(11x11x3x64)->(11x11x3x64) -t f32,aggregated,763.158,0,763.158,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(9216x4096) -t f32,aggregated,1315.789,0,1315.789,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(4096x4096) -t f32,aggregated,1447.368,0,1447.368,1.0,0,0
+unique to sys1,Identity,GPU-0,0:(3x3x384x384)->(3x3x384x384) -t f32,aggregated,684.211,0,684.211,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(4096x1001) -t f32,aggregated,1789.474,0,1789.474,1.0,0,0
+unique to sys1,Const,GPU-0,0:(none)->(1) -t f32,aggregated,7697.368,0,1539.474,5.0,0,0
+unique to sys1,Identity,GPU-0,0:(9216x4096)->(9216x4096) -t f32,aggregated,763.158,0,763.158,1.0,0,0
+unique to sys1,Const,GPU-0,0:(none)->(128) -t f32 -Tdim i32,aggregated,1447.368,0,1447.368,1.0,0,0
+unique to sys1,Identity,GPU-0,0:(4096x4096)->(4096x4096) -t f32,aggregated,776.316,0,776.316,1.0,0,0
+unique to sys1,Identity,GPU-0,0:(3x3x192x384)->(3x3x192x384) -t f32,aggregated,763.158,0,763.158,1.0,0,0
+unique to sys1,Const,GPU-0,0:(none)->(4),aggregated,5552.632,0,925.439,6.0,0,0
+unique to sys1,Identity,GPU-0,0:(192)->(192) -t f32,aggregated,723.684,0,723.684,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(3x3x384x256) -t f32,aggregated,1710.526,0,1710.526,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(64) -t f32,aggregated,1078.947,0,1078.947,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(256) -t f32,aggregated,1157.895,0,1157.895,1.0,0,0
+unique to sys1,VariableV2,GPU-0,0:(none)->(384) -t f32,aggregated,2210.526,0,1105.263,2.0,0,0
+unique to sys1,Const,GPU-0,0:(none)->(2) -t i32,aggregated,1657.895,0,828.947,2.0,0,0

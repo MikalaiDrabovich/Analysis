@@ -1,0 +1,593 @@
+/usr/local/lib/python3.5/dist-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+W0313 13:01:28.728998 140649912604416 tf_logging.py:125] From /home/ndr/work_february/TensorScope_test_git/benchmarks/tf_cnn_benchmarks/benchmark_cnn.py:1929: Supervisor.__init__ (from tensorflow.python.training.supervisor) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please switch to tf.train.MonitoredTrainingSession
+2019-03-13 13:01:28.873465: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:897] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-03-13 13:01:28.873875: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1404] Found device 0 with properties: 
+name: GeForce GTX 1060 major: 6 minor: 1 memoryClockRate(GHz): 1.6705
+pciBusID: 0000:01:00.0
+totalMemory: 5.94GiB freeMemory: 5.41GiB
+2019-03-13 13:01:28.873890: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1483] Adding visible gpu devices: 0
+2019-03-13 13:01:29.113750: I tensorflow/core/common_runtime/gpu/gpu_device.cc:964] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-13 13:01:29.113778: I tensorflow/core/common_runtime/gpu/gpu_device.cc:970]      0 
+2019-03-13 13:01:29.113785: I tensorflow/core/common_runtime/gpu/gpu_device.cc:983] 0:   N 
+2019-03-13 13:01:29.113937: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1096] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 5180 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1060, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2019-03-13 13:01:29.114120: E tensorflow/core/common_runtime/gpu/gpu_device.cc:228] Illegal GPUOptions.experimental.num_dev_to_dev_copy_streams=0 set to 1 instead.
+I0313 13:01:29.236864 140649912604416 tf_logging.py:115] Running local_init_op.
+I0313 13:01:29.252057 140649912604416 tf_logging.py:115] Done running local_init_op.
+TensorFlow:  1.9
+Model:       alexnet
+Dataset:     imagenet (synthetic)
+Mode:        training
+SingleSess:  False
+Batch size:  128 global
+             128.0 per device
+Num batches: 100000
+Num epochs:  9.99
+Devices:     ['/gpu:0']
+Data format: NHWC
+Optimizer:   sgd
+Variables:   parameter_server
+==========
+Generating model
+Running warm up
+Finished session run -2 in 2.319s, steps analyzed: 0, avg session time: 2.319s.
+self.actual_step =  1
+Warm-up step 1/3 completed in 2.3193 seconds.
+
+Finished session run -1 in 0.152s, steps analyzed: 0, avg session time: 1.236s.
+self.actual_step =  2
+Warm-up step 2/3 completed in 0.1523 seconds.
+
+Finished session run 0 in 0.148s, steps analyzed: 0, avg session time: 0.873s.
+self.actual_step =  3
+Warm-up step 3/3 completed in 0.1476 seconds.
+
+Done warm up
+Step	Img/sec	total_loss
+Finished session run 1 in 0.148s, steps analyzed: 0, avg session time: 0.148s.
+self.actual_step =  4
+Microsecond timestamps will be used for calculations in nanoseconds
+       Experiment started before 1552507291000000000 ns from 1/1/1970
+Session # 4       started at about: 1552507291000000000 ns (+/- 1000)
+Session # 4 first op started after: 1552507291911446000 ns (+/- 1000)
+Session # 4   last op ended before: 1552507292057709000 ns (+/- 1000)
+Session # 4         total duration: 0.146263 seconds
+step 1/42 session run: 0.1484 sec., statistics calculated in: 0.1759 sec.
+I0313 13:01:32.364180 140649912604416 tf_logging.py:115] timeline saved, took 0.0309 seconds.
+1	images/sec: 281.8 +/- 0.0 (jitter = 0.0)	7.199
+Finished session run 2 in 0.148s, steps analyzed: 1, avg session time: 0.148s.
+self.actual_step =  5
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 5       started at about: 1552507292000000000 ns (+/- 1000)
+Session # 5 first op started after: 1552507292366459000 ns (+/- 1000)
+Session # 5   last op ended before: 1552507292511434000 ns (+/- 1000)
+Session # 5         total duration: 0.144975 seconds
+step 2/42 session run: 0.1477 sec., statistics calculated in: 0.1712 sec.
+Finished session run 3 in 0.152s, steps analyzed: 2, avg session time: 0.149s.
+self.actual_step =  6
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 6       started at about: 1552507292000000000 ns (+/- 1000)
+Session # 6 first op started after: 1552507292689403000 ns (+/- 1000)
+Session # 6   last op ended before: 1552507292838477000 ns (+/- 1000)
+Session # 6         total duration: 0.149074 seconds
+step 3/42 session run: 0.1518 sec., statistics calculated in: 0.1728 sec.
+Finished session run 4 in 0.151s, steps analyzed: 3, avg session time: 0.150s.
+self.actual_step =  7
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 7       started at about: 1552507293000000000 ns (+/- 1000)
+Session # 7 first op started after: 1552507293018125000 ns (+/- 1000)
+Session # 7   last op ended before: 1552507293166149000 ns (+/- 1000)
+Session # 7         total duration: 0.148024 seconds
+step 4/42 session run: 0.1508 sec., statistics calculated in: 0.1726 sec.
+Finished session run 5 in 0.150s, steps analyzed: 4, avg session time: 0.150s.
+self.actual_step =  8
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 8       started at about: 1552507293000000000 ns (+/- 1000)
+Session # 8 first op started after: 1552507293345731000 ns (+/- 1000)
+Session # 8   last op ended before: 1552507293492988000 ns (+/- 1000)
+Session # 8         total duration: 0.147257 seconds
+step 5/42 session run: 0.1501 sec., statistics calculated in: 0.1722 sec.
+Finished session run 6 in 0.151s, steps analyzed: 5, avg session time: 0.150s.
+self.actual_step =  9
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 9       started at about: 1552507293000000000 ns (+/- 1000)
+Session # 9 first op started after: 1552507293672180000 ns (+/- 1000)
+Session # 9   last op ended before: 1552507293819691000 ns (+/- 1000)
+Session # 9         total duration: 0.147511 seconds
+step 6/42 session run: 0.1506 sec., statistics calculated in: 0.1716 sec.
+Finished session run 7 in 0.151s, steps analyzed: 6, avg session time: 0.150s.
+self.actual_step =  10
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 10       started at about: 1552507293000000000 ns (+/- 1000)
+Session # 10 first op started after: 1552507293998882000 ns (+/- 1000)
+Session # 10   last op ended before: 1552507294147056000 ns (+/- 1000)
+Session # 10         total duration: 0.148174 seconds
+step 7/42 session run: 0.1511 sec., statistics calculated in: 0.1717 sec.
+Finished session run 8 in 0.151s, steps analyzed: 7, avg session time: 0.150s.
+self.actual_step =  11
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 11       started at about: 1552507294000000000 ns (+/- 1000)
+Session # 11 first op started after: 1552507294325836000 ns (+/- 1000)
+Session # 11   last op ended before: 1552507294474116000 ns (+/- 1000)
+Session # 11         total duration: 0.148280 seconds
+step 8/42 session run: 0.1512 sec., statistics calculated in: 0.2239 sec.
+Finished session run 9 in 0.152s, steps analyzed: 8, avg session time: 0.150s.
+self.actual_step =  12
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 12       started at about: 1552507294000000000 ns (+/- 1000)
+Session # 12 first op started after: 1552507294705284000 ns (+/- 1000)
+Session # 12   last op ended before: 1552507294853837000 ns (+/- 1000)
+Session # 12         total duration: 0.148553 seconds
+step 9/42 session run: 0.1516 sec., statistics calculated in: 0.1729 sec.
+Finished session run 10 in 0.151s, steps analyzed: 9, avg session time: 0.150s.
+self.actual_step =  13
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 13       started at about: 1552507295000000000 ns (+/- 1000)
+Session # 13 first op started after: 1552507295033933000 ns (+/- 1000)
+Session # 13   last op ended before: 1552507295181711000 ns (+/- 1000)
+Session # 13         total duration: 0.147778 seconds
+step 10/42 session run: 0.1508 sec., statistics calculated in: 0.1730 sec.
+Finished session run 11 in 0.151s, steps analyzed: 10, avg session time: 0.150s.
+self.actual_step =  14
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 14       started at about: 1552507295000000000 ns (+/- 1000)
+Session # 14 first op started after: 1552507295361882000 ns (+/- 1000)
+Session # 14   last op ended before: 1552507295509525000 ns (+/- 1000)
+Session # 14         total duration: 0.147643 seconds
+step 11/42 session run: 0.1507 sec., statistics calculated in: 0.1730 sec.
+Finished session run 12 in 0.151s, steps analyzed: 11, avg session time: 0.150s.
+self.actual_step =  15
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 15       started at about: 1552507295000000000 ns (+/- 1000)
+Session # 15 first op started after: 1552507295689819000 ns (+/- 1000)
+Session # 15   last op ended before: 1552507295837308000 ns (+/- 1000)
+Session # 15         total duration: 0.147489 seconds
+step 12/42 session run: 0.1505 sec., statistics calculated in: 0.1725 sec.
+Finished session run 13 in 0.152s, steps analyzed: 12, avg session time: 0.151s.
+self.actual_step =  16
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 16       started at about: 1552507296000000000 ns (+/- 1000)
+Session # 16 first op started after: 1552507296017047000 ns (+/- 1000)
+Session # 16   last op ended before: 1552507296165848000 ns (+/- 1000)
+Session # 16         total duration: 0.148801 seconds
+step 13/42 session run: 0.1519 sec., statistics calculated in: 0.1723 sec.
+Finished session run 14 in 0.151s, steps analyzed: 13, avg session time: 0.151s.
+self.actual_step =  17
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 17       started at about: 1552507296000000000 ns (+/- 1000)
+Session # 17 first op started after: 1552507296345484000 ns (+/- 1000)
+Session # 17   last op ended before: 1552507296493539000 ns (+/- 1000)
+Session # 17         total duration: 0.148055 seconds
+step 14/42 session run: 0.1511 sec., statistics calculated in: 0.1735 sec.
+Finished session run 15 in 0.151s, steps analyzed: 14, avg session time: 0.151s.
+self.actual_step =  18
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 18       started at about: 1552507296000000000 ns (+/- 1000)
+Session # 18 first op started after: 1552507296674496000 ns (+/- 1000)
+Session # 18   last op ended before: 1552507296822160000 ns (+/- 1000)
+Session # 18         total duration: 0.147664 seconds
+step 15/42 session run: 0.1509 sec., statistics calculated in: 0.1718 sec.
+Finished session run 16 in 0.153s, steps analyzed: 15, avg session time: 0.151s.
+self.actual_step =  19
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 19       started at about: 1552507297000000000 ns (+/- 1000)
+Session # 19 first op started after: 1552507297001270000 ns (+/- 1000)
+Session # 19   last op ended before: 1552507297150842000 ns (+/- 1000)
+Session # 19         total duration: 0.149572 seconds
+step 16/42 session run: 0.1526 sec., statistics calculated in: 0.1716 sec.
+Finished session run 17 in 0.149s, steps analyzed: 16, avg session time: 0.151s.
+self.actual_step =  20
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 20       started at about: 1552507297000000000 ns (+/- 1000)
+Session # 20 first op started after: 1552507297329770000 ns (+/- 1000)
+Session # 20   last op ended before: 1552507297475664000 ns (+/- 1000)
+Session # 20         total duration: 0.145894 seconds
+step 17/42 session run: 0.1490 sec., statistics calculated in: 0.1734 sec.
+Finished session run 18 in 0.148s, steps analyzed: 17, avg session time: 0.150s.
+self.actual_step =  21
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 21       started at about: 1552507297000000000 ns (+/- 1000)
+Session # 21 first op started after: 1552507297656402000 ns (+/- 1000)
+Session # 21   last op ended before: 1552507297801303000 ns (+/- 1000)
+Session # 21         total duration: 0.144901 seconds
+step 18/42 session run: 0.1480 sec., statistics calculated in: 0.1728 sec.
+Finished session run 19 in 0.148s, steps analyzed: 18, avg session time: 0.150s.
+self.actual_step =  22
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 22       started at about: 1552507297000000000 ns (+/- 1000)
+Session # 22 first op started after: 1552507297981410000 ns (+/- 1000)
+Session # 22   last op ended before: 1552507298126173000 ns (+/- 1000)
+Session # 22         total duration: 0.144763 seconds
+step 19/42 session run: 0.1479 sec., statistics calculated in: 0.1738 sec.
+Finished session run 20 in 0.150s, steps analyzed: 19, avg session time: 0.150s.
+self.actual_step =  23
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 23       started at about: 1552507298000000000 ns (+/- 1000)
+Session # 23 first op started after: 1552507298307433000 ns (+/- 1000)
+Session # 23   last op ended before: 1552507298454070000 ns (+/- 1000)
+Session # 23         total duration: 0.146637 seconds
+step 20/42 session run: 0.1498 sec., statistics calculated in: 0.1730 sec.
+Finished session run 21 in 0.149s, steps analyzed: 20, avg session time: 0.150s.
+self.actual_step =  24
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 24       started at about: 1552507298000000000 ns (+/- 1000)
+Session # 24 first op started after: 1552507298634531000 ns (+/- 1000)
+Session # 24   last op ended before: 1552507298780190000 ns (+/- 1000)
+Session # 24         total duration: 0.145659 seconds
+step 21/42 session run: 0.1489 sec., statistics calculated in: 0.1723 sec.
+Finished session run 22 in 0.150s, steps analyzed: 21, avg session time: 0.150s.
+self.actual_step =  25
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 25       started at about: 1552507298000000000 ns (+/- 1000)
+Session # 25 first op started after: 1552507298959942000 ns (+/- 1000)
+Session # 25   last op ended before: 1552507299106343000 ns (+/- 1000)
+Session # 25         total duration: 0.146401 seconds
+step 22/42 session run: 0.1496 sec., statistics calculated in: 0.1725 sec.
+Finished session run 23 in 0.147s, steps analyzed: 22, avg session time: 0.150s.
+self.actual_step =  26
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 26       started at about: 1552507299000000000 ns (+/- 1000)
+Session # 26 first op started after: 1552507299286315000 ns (+/- 1000)
+Session # 26   last op ended before: 1552507299430478000 ns (+/- 1000)
+Session # 26         total duration: 0.144163 seconds
+step 23/42 session run: 0.1473 sec., statistics calculated in: 0.1732 sec.
+Finished session run 24 in 0.149s, steps analyzed: 23, avg session time: 0.150s.
+self.actual_step =  27
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 27       started at about: 1552507299000000000 ns (+/- 1000)
+Session # 27 first op started after: 1552507299611121000 ns (+/- 1000)
+Session # 27   last op ended before: 1552507299756746000 ns (+/- 1000)
+Session # 27         total duration: 0.145625 seconds
+step 24/42 session run: 0.1489 sec., statistics calculated in: 0.1785 sec.
+Finished session run 25 in 0.146s, steps analyzed: 24, avg session time: 0.150s.
+self.actual_step =  28
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 28       started at about: 1552507299000000000 ns (+/- 1000)
+Session # 28 first op started after: 1552507299942759000 ns (+/- 1000)
+Session # 28   last op ended before: 1552507300085941000 ns (+/- 1000)
+Session # 28         total duration: 0.143182 seconds
+step 25/42 session run: 0.1464 sec., statistics calculated in: 0.1725 sec.
+Finished session run 26 in 0.147s, steps analyzed: 25, avg session time: 0.150s.
+self.actual_step =  29
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 29       started at about: 1552507300000000000 ns (+/- 1000)
+Session # 29 first op started after: 1552507300265977000 ns (+/- 1000)
+Session # 29   last op ended before: 1552507300409761000 ns (+/- 1000)
+Session # 29         total duration: 0.143784 seconds
+step 26/42 session run: 0.1470 sec., statistics calculated in: 0.1718 sec.
+Finished session run 27 in 0.151s, steps analyzed: 26, avg session time: 0.150s.
+self.actual_step =  30
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 30       started at about: 1552507300000000000 ns (+/- 1000)
+Session # 30 first op started after: 1552507300588913000 ns (+/- 1000)
+Session # 30   last op ended before: 1552507300736980000 ns (+/- 1000)
+Session # 30         total duration: 0.148067 seconds
+step 27/42 session run: 0.1512 sec., statistics calculated in: 0.1717 sec.
+Finished session run 28 in 0.151s, steps analyzed: 27, avg session time: 0.150s.
+self.actual_step =  31
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 31       started at about: 1552507300000000000 ns (+/- 1000)
+Session # 31 first op started after: 1552507300916134000 ns (+/- 1000)
+Session # 31   last op ended before: 1552507301063515000 ns (+/- 1000)
+Session # 31         total duration: 0.147381 seconds
+step 28/42 session run: 0.1506 sec., statistics calculated in: 0.1726 sec.
+Finished session run 29 in 0.149s, steps analyzed: 28, avg session time: 0.150s.
+self.actual_step =  32
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 32       started at about: 1552507301000000000 ns (+/- 1000)
+Session # 32 first op started after: 1552507301243469000 ns (+/- 1000)
+Session # 32   last op ended before: 1552507301389388000 ns (+/- 1000)
+Session # 32         total duration: 0.145919 seconds
+step 29/42 session run: 0.1491 sec., statistics calculated in: 0.1722 sec.
+Finished session run 30 in 0.150s, steps analyzed: 29, avg session time: 0.150s.
+self.actual_step =  33
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 33       started at about: 1552507301000000000 ns (+/- 1000)
+Session # 33 first op started after: 1552507301569037000 ns (+/- 1000)
+Session # 33   last op ended before: 1552507301715696000 ns (+/- 1000)
+Session # 33         total duration: 0.146659 seconds
+step 30/42 session run: 0.1499 sec., statistics calculated in: 0.1716 sec.
+Finished session run 31 in 0.150s, steps analyzed: 30, avg session time: 0.150s.
+self.actual_step =  34
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 34       started at about: 1552507301000000000 ns (+/- 1000)
+Session # 34 first op started after: 1552507301894675000 ns (+/- 1000)
+Session # 34   last op ended before: 1552507302041824000 ns (+/- 1000)
+Session # 34         total duration: 0.147149 seconds
+step 31/42 session run: 0.1503 sec., statistics calculated in: 0.1718 sec.
+Finished session run 32 in 0.149s, steps analyzed: 31, avg session time: 0.150s.
+self.actual_step =  35
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 35       started at about: 1552507302000000000 ns (+/- 1000)
+Session # 35 first op started after: 1552507302221022000 ns (+/- 1000)
+Session # 35   last op ended before: 1552507302367207000 ns (+/- 1000)
+Session # 35         total duration: 0.146185 seconds
+step 32/42 session run: 0.1494 sec., statistics calculated in: 0.1723 sec.
+Finished session run 33 in 0.152s, steps analyzed: 32, avg session time: 0.150s.
+self.actual_step =  36
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 36       started at about: 1552507302000000000 ns (+/- 1000)
+Session # 36 first op started after: 1552507302546913000 ns (+/- 1000)
+Session # 36   last op ended before: 1552507302695257000 ns (+/- 1000)
+Session # 36         total duration: 0.148344 seconds
+step 33/42 session run: 0.1515 sec., statistics calculated in: 0.1717 sec.
+Finished session run 34 in 0.148s, steps analyzed: 33, avg session time: 0.150s.
+self.actual_step =  37
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 37       started at about: 1552507302000000000 ns (+/- 1000)
+Session # 37 first op started after: 1552507302874380000 ns (+/- 1000)
+Session # 37   last op ended before: 1552507303019238000 ns (+/- 1000)
+Session # 37         total duration: 0.144858 seconds
+step 34/42 session run: 0.1480 sec., statistics calculated in: 0.1715 sec.
+Finished session run 35 in 0.148s, steps analyzed: 34, avg session time: 0.150s.
+self.actual_step =  38
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 38       started at about: 1552507303000000000 ns (+/- 1000)
+Session # 38 first op started after: 1552507303198170000 ns (+/- 1000)
+Session # 38   last op ended before: 1552507303343075000 ns (+/- 1000)
+Session # 38         total duration: 0.144905 seconds
+step 35/42 session run: 0.1481 sec., statistics calculated in: 0.1721 sec.
+Finished session run 36 in 0.146s, steps analyzed: 35, avg session time: 0.150s.
+self.actual_step =  39
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 39       started at about: 1552507303000000000 ns (+/- 1000)
+Session # 39 first op started after: 1552507303522611000 ns (+/- 1000)
+Session # 39   last op ended before: 1552507303665681000 ns (+/- 1000)
+Session # 39         total duration: 0.143070 seconds
+step 36/42 session run: 0.1465 sec., statistics calculated in: 0.1717 sec.
+Finished session run 37 in 0.148s, steps analyzed: 36, avg session time: 0.150s.
+self.actual_step =  40
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 40       started at about: 1552507303000000000 ns (+/- 1000)
+Session # 40 first op started after: 1552507303845317000 ns (+/- 1000)
+Session # 40   last op ended before: 1552507303989720000 ns (+/- 1000)
+Session # 40         total duration: 0.144403 seconds
+step 37/42 session run: 0.1476 sec., statistics calculated in: 0.1718 sec.
+Finished session run 38 in 0.146s, steps analyzed: 37, avg session time: 0.150s.
+self.actual_step =  41
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 41       started at about: 1552507304000000000 ns (+/- 1000)
+Session # 41 first op started after: 1552507304168980000 ns (+/- 1000)
+Session # 41   last op ended before: 1552507304311941000 ns (+/- 1000)
+Session # 41         total duration: 0.142961 seconds
+step 38/42 session run: 0.1462 sec., statistics calculated in: 0.1723 sec.
+Finished session run 39 in 0.147s, steps analyzed: 38, avg session time: 0.149s.
+self.actual_step =  42
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 42       started at about: 1552507304000000000 ns (+/- 1000)
+Session # 42 first op started after: 1552507304491738000 ns (+/- 1000)
+Session # 42   last op ended before: 1552507304635584000 ns (+/- 1000)
+Session # 42         total duration: 0.143846 seconds
+step 39/42 session run: 0.1471 sec., statistics calculated in: 0.1714 sec.
+Finished session run 40 in 0.147s, steps analyzed: 39, avg session time: 0.149s.
+self.actual_step =  43
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 43       started at about: 1552507304000000000 ns (+/- 1000)
+Session # 43 first op started after: 1552507304814368000 ns (+/- 1000)
+Session # 43   last op ended before: 1552507304957924000 ns (+/- 1000)
+Session # 43         total duration: 0.143556 seconds
+step 40/42 session run: 0.1468 sec., statistics calculated in: 0.1719 sec.
+Finished session run 41 in 0.151s, steps analyzed: 40, avg session time: 0.149s.
+self.actual_step =  44
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 44       started at about: 1552507305000000000 ns (+/- 1000)
+Session # 44 first op started after: 1552507305137255000 ns (+/- 1000)
+Session # 44   last op ended before: 1552507305284823000 ns (+/- 1000)
+Session # 44         total duration: 0.147568 seconds
+step 41/42 session run: 0.1508 sec., statistics calculated in: 0.1723 sec.
+Finished session run 42 in 0.149s, steps analyzed: 41, avg session time: 0.149s.
+self.actual_step =  45
+Microsecond timestamps will be used for calculations in nanoseconds
+Session # 45       started at about: 1552507305000000000 ns (+/- 1000)
+Session # 45 first op started after: 1552507305464573000 ns (+/- 1000)
+Session # 45   last op ended before: 1552507305610268000 ns (+/- 1000)
+Session # 45         total duration: 0.145695 seconds
+step 42/42 session run: 0.1489 sec., statistics calculated in: 0.1717 sec.
+
+[TensorScope] Before aggregation:
+Number of op records analyzed: 9660
+Number of session runs analyzed: 42
+Wall time for all session runs (with profiler overhead): 6276 ms.
+Number of ops: 230
+Avg. sum of all ops: 0.145 sec. (gpu/xla + replica cpu + memcpy)
+Avg. sum of gpu ops: 0.145 sec. (gpu/xla + memcpy)
+----------------------------------------------------------------
+samples/sec: 884.8 (batch=128, from gpu, xla, memcpy, cpu ops)
+samples/sec: 884.9 (batch=128, from gpu, xla, memcpy ops)
+----------------------------------------------------------------
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1421929_924000_1115500_2104500_879255_1964602_4_13_42_tower_0-v-cg-mpool1-MaxPool.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/562000_541500_559500_567500_522827_601173_37_185_42_tower_0-v-cg-conv2-BiasAdd.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/444548_442000_443000_444000_438482_450613_26_86_42_tower_0-v-cg-conv3-Relu.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/8876548_8667500_8904000_9123500_8560968_9192127_-5_22_42_tower_0-v-cg-conv3-conv2d-Conv2D.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/939214_937000_939000_940000_936255_942174_12_45_42_tower_0-v-l2_loss-L2Loss_10.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1238833_1210000_1237500_1251000_1183501_1294166_43_252_42_tower_0-v-cg-mpool0-MaxPool.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/251190_237500_247500_252000_214232_288149_56_350_42_tower_0-v-xentropy-sparse_softmax_cross_entropy_loss-xentropy-xentropy.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/372714_364250_373000_379750_364289_381140_-2_15_42_tower_0-v-cg-conv4-BiasAdd.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/4724095_4574000_4696000_4812250_4548831_4899359_5_21_42_tower_0-v-cg-conv1-conv2d-Conv2D.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1309429_1145500_1190000_1210750_953581_1665276_24_74_42_tower_0-v-cg-conv1-BiasAdd.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/648548_647000_649000_650000_646293_650802_-1_27_42_tower_0-v-gradients-tower_0-v-cg-conv2-Relu_grad-ReluGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/433048_432000_433000_433750_432037_434059_9_43_42_tower_0-v-l2_loss-L2Loss_12.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/651000_650000_650000_651000_647331_654669_51_308_42_tower_0-v-gradients-tower_0-v-cg-conv0-BiasAdd_grad-BiasAddGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1634548_1577750_1634500_1655500_1561525_1707570_17_69_42_tower_0-v-cg-conv0-BiasAdd.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/376500_363250_379000_387500_363591_389409_-2_16_42_tower_0-v-cg-affine2-xw_plus_b-MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/111167_111000_111000_111000_110373_111960_11_54_42_tower_0-v-gradients-AddN_9.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1389643_1387250_1390000_1392000_1385948_1393337_1_32_42_tower_0-v-gradients-tower_0-v-cg-conv1-Relu_grad-ReluGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/2795524_2749000_2806500_2856000_2719194_2871854_-8_32_42_tower_0-v-gradients-tower_0-v-cg-affine0-xw_plus_b-MatMul_grad-MatMul_1.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1316881_1300000_1302000_1304000_1254267_1379495_41_182_42_tower_0-v-cg-conv0-Relu.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/2115810_2106500_2115500_2127500_2097006_2134613_-1_33_42_tower_0-v-gradients-tower_0-v-cg-mpool0-MaxPool_grad-MaxPoolGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/6453286_6198250_6543500_6689250_6109539_6797032_-6_27_42_tower_0-v-cg-conv0-conv2d-Conv2D.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/2791476_2754250_2794500_2848000_2727260_2855692_-5_29_42_tower_0-v-gradients-tower_0-v-cg-affine0-xw_plus_b-MatMul_grad-MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1268214_1255000_1269000_1287750_1242252_1294176_2_26_42_tower_0-v-gradients-tower_0-v-cg-mpool1-MaxPool_grad-MaxPoolGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/9099548_9020000_9103000_9182000_8982543_9216552_6_36_42_tower_0-v-gradients-tower_0-v-cg-conv3-conv2d-Conv2D_grad-Conv2DBackpropInput.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/6174476_5990500_6207500_6288250_5983075_6365878_5_32_42_tower_0-v-cg-conv4-conv2d-Conv2D.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/438143_436000_438000_440000_435928_440358_0_19_42_tower_0-v-gradients-tower_0-v-cg-conv4-Relu_grad-ReluGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/189500_188250_189000_190000_187998_191002_6_36_42_tower_0-v-gradients-tower_0-v-cg-conv4-BiasAdd_grad-BiasAddGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1856738_1770000_1888000_1933250_1768652_1944825_-6_21_42_Conv2DBackpropFilter-0-TransposeNHWCToNCHW-LayoutOptimizer.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/491548_484000_485000_485000_447649_535447_60_380_42_tower_0-v-gradients-tower_0-v-cg-conv1-BiasAdd_grad-BiasAddGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/575357_540250_559500_564750_505759_644956_25_77_42_tower_0-v-cg-conv3-BiasAdd.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/382810_359500_381500_388000_334325_431294_52_319_42_tower_0-v-gradients-tower_0-v-cg-affine2-xw_plus_b-MatMul_grad-MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/264571_257000_257000_258000_218640_310503_60_381_42_tower_0-v-gradients-tower_0-v-cg-conv2-BiasAdd_grad-BiasAddGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/140095_139000_140000_140000_138250_141941_33_155_42_tower_0-v-l2_loss-L2Loss_14.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/324262_320000_321000_321000_300898_347625_60_381_42_tower_0-v-gradients-AddN_1.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1918738_1915000_1918500_1922750_1913934_1923542_2_23_42_tower_0-v-gradients-tower_0-v-cg-conv0-Relu_grad-ReluGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1287667_1283000_1284000_1285000_1263985_1311348_60_376_42_tower_0-v-gradients-AddN_3.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/298738_298000_299000_299750_297632_299844_4_30_42_tower_0-v-cg-conv4-Relu.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/2883119_2880000_2883500_2886000_2879311_2886927_3_22_42_tower_0-v-gradients-AddN_5.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/342333_337250_345000_351000_329834_354832_-6_22_42_tower_0-v-gradients-tower_0-v-cg-affine2-xw_plus_b-MatMul_grad-MatMul_1.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/5077881_5044250_5074000_5091000_5012200_5143562_30_146_42_tower_0-v-gradients-tower_0-v-cg-conv1-conv2d-Conv2D_grad-Conv2DBackpropFilter.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1367857_1299000_1382000_1420750_1301740_1433974_1_24_42_tower_0-v-cg-affine1-xw_plus_b-MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/3042976_2899250_3076500_3168250_2907856_3178096_-3_15_42_tower_0-v-cg-affine0-xw_plus_b-MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1392833_1343500_1404500_1434000_1319259_1466408_13_80_42_tower_0-v-gradients-tower_0-v-cg-affine1-xw_plus_b-MatMul_grad-MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1546738_946000_1421000_2146000_953283_2140193_0_10_42_tower_0-v-cg-conv1-Relu.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/220524_220000_220000_221000_219250_221797_30_163_42_tower_0-v-gradients-tower_0-v-l2_loss-L2Loss_14_grad-mul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/8779952_8705250_8781000_8845750_8606111_8953793_12_59_42_tower_0-v-gradients-tower_0-v-cg-conv3-conv2d-Conv2D_grad-Conv2DBackpropFilter.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/4500548_4472250_4493500_4515250_4439977_4561118_31_164_42_tower_0-v-gradients-tower_0-v-cg-conv1-conv2d-Conv2D_grad-Conv2DBackpropInput.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/2890119_2880000_2882500_2886000_2844909_2935329_60_375_42_append_apply_gradient_ops-GradientDescent-update_v-cg-affine0-weights-ApplyGradientDescent.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/6266786_6179500_6247000_6317500_6141491_6392080_21_96_42_tower_0-v-gradients-tower_0-v-cg-conv4-conv2d-Conv2D_grad-Conv2DBackpropInput.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/288929_286000_288500_291750_285613_292244_2_20_42_tower_0-v-cg-mpool2-MaxPool.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/322238_322000_322000_323000_321280_323196_3_21_42_append_apply_gradient_ops-GradientDescent-update_v-cg-affine2-weights-ApplyGradientDescent.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1253238_1210000_1267000_1291500_1210304_1296172_-5_18_42_tower_0-v-gradients-tower_0-v-cg-affine1-xw_plus_b-MatMul_grad-MatMul_1.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/107833_107000_108000_108000_107174_108493_2_22_42_append_apply_gradient_ops-GradientDescent-update_v-cg-conv3-conv2d-kernel-ApplyGradientDescent.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/820881_809000_821500_835000_805273_836489_1_18_42_tower_0-v-gradients-tower_0-v-cg-mpool2-MaxPool_grad-MaxPoolGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/885786_879000_881000_882000_851077_920494_60_379_42_tower_0-v-gradients-tower_0-v-l2_loss-L2Loss_12_grad-mul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1981024_1971000_1973000_1977000_1931839_2030209_60_376_42_tower_0-v-gradients-tower_0-v-l2_loss-L2Loss_10_grad-mul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/1294048_1285000_1287000_1288750_1246586_1341509_60_380_42_append_apply_gradient_ops-GradientDescent-update_v-cg-affine1-weights-ApplyGradientDescent.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/7129238_7066750_7133000_7154750_7017244_7241232_14_65_42_tower_0-v-gradients-tower_0-v-cg-conv0-conv2d-Conv2D_grad-Conv2DBackpropFilter.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/6100190_5938750_6042000_6142000_5824376_6376005_18_64_42_tower_0-v-cg-conv2-conv2d-Conv2D.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/646238_645000_646000_648000_644380_648097_1_20_42_tower_0-v-gradients-tower_0-v-cg-conv3-Relu_grad-ReluGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/6084476_6045750_6090000_6127000_6012065_6156887_3_36_42_tower_0-v-gradients-tower_0-v-cg-conv4-conv2d-Conv2D_grad-Conv2DBackpropFilter.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/450857_443000_444000_445000_407663_494051_60_381_42_tower_0-v-cg-conv2-Relu.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/5037262_4972250_5022500_5053500_4895570_5178954_39_207_42_tower_0-v-gradients-tower_0-v-cg-conv2-conv2d-Conv2D_grad-Conv2DBackpropInput.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/5768738_5729250_5765500_5805000_5674446_5863030_13_64_42_tower_0-v-gradients-tower_0-v-cg-conv2-conv2d-Conv2D_grad-Conv2DBackpropFilter.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/layer_time_distribution/258095_257000_258000_259000_255867_260324_19_101_42_tower_0-v-gradients-tower_0-v-cg-conv3-BiasAdd_grad-BiasAddGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/9099548_9020000_9103000_9182000_8982543_9216552_6_36_42_Conv2DBackpropInput.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/8876548_8667500_8904000_9123500_8560968_9192127_-5_22_42_Conv2D.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/8779952_8705250_8781000_8845750_8606111_8953793_12_59_42_Conv2DBackpropFilter.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/7129238_7066750_7133000_7154750_7017244_7241232_14_65_42_Conv2DBackpropFilter.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/6453286_6198250_6543500_6689250_6109539_6797032_-6_27_42_Conv2D.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/6266786_6179500_6247000_6317500_6141491_6392080_21_96_42_Conv2DBackpropInput.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/6174476_5990500_6207500_6288250_5983075_6365878_5_32_42_Conv2D.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/6084476_6045750_6090000_6127000_6012065_6156887_3_36_42_Conv2DBackpropFilter.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/6100190_5938750_6042000_6142000_5824376_6376005_18_64_42_Conv2D.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/5768738_5729250_5765500_5805000_5674446_5863030_13_64_42_Conv2DBackpropFilter.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/5077881_5044250_5074000_5091000_5012200_5143562_30_146_42_Conv2DBackpropFilter.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/5037262_4972250_5022500_5053500_4895570_5178954_39_207_42_Conv2DBackpropInput.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/4724095_4574000_4696000_4812250_4548831_4899359_5_21_42_Conv2D.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/4500548_4472250_4493500_4515250_4439977_4561118_31_164_42_Conv2DBackpropInput.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/3042976_2899250_3076500_3168250_2907856_3178096_-3_15_42_MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/2890119_2880000_2882500_2886000_2844909_2935329_60_375_42_ApplyGradientDescent.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/2883119_2880000_2883500_2886000_2879311_2886927_3_22_42_AddN.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/2795524_2749000_2806500_2856000_2719194_2871854_-8_32_42_MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/2791476_2754250_2794500_2848000_2727260_2855692_-5_29_42_MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/2115810_2106500_2115500_2127500_2097006_2134613_-1_33_42_MaxPoolGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1981024_1971000_1973000_1977000_1931839_2030209_60_376_42_Mul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1918738_1915000_1918500_1922750_1913934_1923542_2_23_42_ReluGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1856738_1770000_1888000_1933250_1768652_1944825_-6_21_42_Transpose.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1634548_1577750_1634500_1655500_1561525_1707570_17_69_42_BiasAdd.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1546738_946000_1421000_2146000_953283_2140193_0_10_42_Relu.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1421929_924000_1115500_2104500_879255_1964602_4_13_42_MaxPool.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1389643_1387250_1390000_1392000_1385948_1393337_1_32_42_ReluGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1392833_1343500_1404500_1434000_1319259_1466408_13_80_42_MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1367857_1299000_1382000_1420750_1301740_1433974_1_24_42_MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1316881_1300000_1302000_1304000_1254267_1379495_41_182_42_Relu.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/647393_646000_647000_649000_645033_649752_2_25_84_ReluGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1294048_1285000_1287000_1288750_1246586_1341509_60_380_42_ApplyGradientDescent.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1287667_1283000_1284000_1285000_1263985_1311348_60_376_42_AddN.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1268214_1255000_1269000_1287750_1242252_1294176_2_26_42_MaxPoolGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1309429_1145500_1190000_1210750_953581_1665276_24_74_42_BiasAdd.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1253238_1210000_1267000_1291500_1210304_1296172_-5_18_42_MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/1238833_1210000_1237500_1251000_1183501_1294166_43_252_42_MaxPool.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/568679_541000_559500_566000_512146_625211_31_119_84_BiasAdd.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/939214_937000_939000_940000_936255_942174_12_45_42_L2Loss.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/447702_442000_443000_445000_416882_478522_86_769_84_Relu.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/885786_879000_881000_882000_851077_920494_60_379_42_Mul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/820881_809000_821500_835000_805273_836489_1_18_42_MaxPoolGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/651000_650000_650000_651000_647331_654669_51_308_42_BiasAddGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/261333_257000_258000_259000_228850_293817_88_795_84_BiasAddGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/491548_484000_485000_485000_447649_535447_60_380_42_BiasAddGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/438143_436000_438000_440000_435928_440358_0_19_42_ReluGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/433048_432000_433000_433750_432037_434059_9_43_42_L2Loss.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/376500_363250_379000_387500_363591_389409_-2_16_42_MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/382810_359500_381500_388000_334325_431294_52_319_42_MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/372714_364250_373000_379750_364289_381140_-2_15_42_BiasAdd.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/342333_337250_345000_351000_329834_354832_-6_22_42_MatMul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/322238_322000_322000_323000_321280_323196_3_21_42_ApplyGradientDescent.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/324262_320000_321000_321000_300898_347625_60_381_42_AddN.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/298738_298000_299000_299750_297632_299844_4_30_42_Relu.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/288929_286000_288500_291750_285613_292244_2_20_42_MaxPool.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/251190_237500_247500_252000_214232_288149_56_350_42_SparseSoftmaxCrossEntropyWithLogits.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/220524_220000_220000_221000_219250_221797_30_163_42_Mul.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/189500_188250_189000_190000_187998_191002_6_36_42_BiasAddGrad.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/140095_139000_140000_140000_138250_141941_33_155_42_L2Loss.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/111167_111000_111000_111000_110373_111960_11_54_42_AddN.png
+histogram saved to file:  /home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/op_time_distribution/107833_107000_108000_108000_107174_108493_2_22_42_ApplyGradientDescent.png
+[TensorScope] After aggregation:
+Using median time value of all occurences - total ops time sum after aggregation may be not be equal to the op time sum before aggregation
+Number of ops: 169
+Avg. sum of all ops: 0.145 sec. (gpu/xla + replica cpu + memcpy)
+Avg. sum of gpu ops: 0.145 sec. (gpu/xla + memcpy)
+----------------------------------------------------------------
+samples/sec: 884.9 (batch=128, from gpu, xla, memcpy, cpu ops)
+samples/sec: 885.0 (batch=128, from gpu, xla, memcpy ops)
+----------------------------------------------------------------
+
+
+================================================================
+  Model Quick Info*
+================================================================
+
+  Description
+  -----------
+    Name:            alexnet
+    Suite:           tf_cnn_benchmarks
+    Images:          yes
+    Data:            single
+    Batch Size:      128
+    Profiled:        soft
+    Format:          NHWC
+    Blocking:        yes
+    XLA:             no
+    Extra 1:         extra_param1
+    Extra 2:         extra_param2
+
+  Complexity
+  ----------
+    Total compute: 628.161 GOps
+    Total memory:  7.189 GB
+
+    CPU compute:   0.000 GOps
+    CPU memory:    0.000 GB
+
+    GPU compute:   628.161 GOps
+    GPU memory:    7.189 GB
+
+  Time
+  ----
+    Total: 0.145 sec
+    CPU:   0.000 sec
+    GPU:   0.145 sec
+
+  Performance
+  -----------
+    Total compute:   4342.5 GOps/sec
+    Total bandwidth: 49.7   GB/sec
+
+    CPU compute:     0.0 GOps/sec
+    CPU bandwidth:   0.0   GB/sec
+
+    GPU compute:     4343.1 GOps/sec
+    GPU bandwidth:   49.7   GB/sec
+
+================================================================
+*Results for 1 batch, 32b data, 2 ops per mutiply-accumulate
+Model ID in characterization_experiments_summary.csv: 2
+Model ID in characterization_experiments.csv: 2
+Charts and detailed stats for ops/layers saved to:
+all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/
+blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/
+/home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/stats_tensorflow_ops.csv
+/home/ndr/work_february/TensorScope_test_git/characterization_scripts/../all_results/alexnet/tf_cnn_benchmarks/GPU_4270_180/software/blocking/xla_off/fp32/128/NHWC/extra_param1/extra_param2/stats_tensorflow_layers.csv
+
+

@@ -1,0 +1,217 @@
+Node	Time
+1000.0	MEMCPY-0	edge_61_loss_scale	read	MEMCPYHtoD	0.0ms 0TOps 0GBs(Transfer)->(4 bytes)
+1000.0	MEMCPY-0	edge_499_average_loss	Mean	MEMCPYDtoH	0.0ms 0TOps 0GBs(Transfer)->(4 bytes)
+642.8571428571429	MEMCPY-0	tower_0	v	gradients	tower_0	v	mul_1_grad	Mul	Snapshot	MEMCPYDtoD	0.0ms 0TOps 0GBs(Transfer)->(4 bytes)
+34105.26315789474	GPU-0	tower_0	v	cg	affine0	xw_plus_b	0.0ms 0TOps 123GBs 0:(128x4096) 1:(4096)->(128x4096)
+1158868.4210526317	GPU-0	tower_0	v	cg	mpool0	MaxPool	1.2ms 0TOps 106GBs 0:(128x64x55x55)->(128x64x27x27)
+49605.26315789474	GPU-0	Cast_3	0.0ms 0TOps 214GBs 0:(3x3x384x384)->(3x3x384x384) -DstT f16 -SrcT f32
+2368.4210526315787	GPU-0	tower_0	v	mul_15	0.0ms 0TOps 14GBs 0:(4096) 1:(1)->(4096)
+1894.7368421052631	CPU-0	_retval_average_loss	Mean_0_0	0.0ms 0TOps 0GBs 0:(1)->(none)
+6342.105263157895	GPU-0	tower_0	v	cg	affine1	affine1	0.0ms 0TOps 661GBs 0:(128x4096)->(128x4096)
+1394.7368421052631	CPU-0	main_fetch_group	_43	0.0ms 0TOps 0GBs 0:(none)->(1)
+2026.3157894736842	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv4	Cast_grad	Cast	0.0ms 0TOps 1GBs 0:(256)->(256) -DstT f32 -SrcT f16
+2263.157894736842	GPU-0	tower_0	v	xentropy	sparse_softmax_cross_entropy_loss	Sum	0.0ms 0TOps 0GBs 0:(128) 1:(1)->(1)
+2131.5789473684213	GPU-0	tower_0	v	gradients	AddN_12	0.0ms 0TOps 1GBs 0:(192) 1:(192)->(192) -N i: 2
+1815.7894736842104	GPU-0	tower_0	v	l2_loss	L2Loss_1	0.0ms 0TOps 0GBs 0:(64)->(1)
+3184.21052631579	GPU-0	tower_0	v	Cast	0.0ms 0TOps 322GBs 0:(128x1001)->(128x1001) -DstT f32 -SrcT f16
+2000.0	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	conv0	biases	ApplyGradientDescent	0.0ms 0TOps 0GBs 0:(64) 1:(1) 2:(64)->(64)
+26157.894736842107	GPU-0	tower_0	v	l2_loss	L2Loss_4	0.0ms 0TOps 101GBs 0:(3x3x192x384)->(1)
+609684.2105263158	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv1	BiasAdd_grad	BiasAddGrad	0.6ms 0TOps 118GBs 0:(128x192x27x27)->(192)
+2552.6315789473683	GPU-0	tower_0	v	truediv_11	0.0ms 0TOps 0GBs 0:(1)->(1)
+678947.3684210526	GPU-0	tower_0	v	cg	conv0	Relu	0.7ms 0TOps 292GBs 0:(128x64x55x55)->(128x64x55x55)
+204868.42105263157	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv4	BiasAdd_grad	BiasAddGrad	0.2ms 0TOps 108GBs 0:(128x256x13x13)->(256)
+2315.7894736842104	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	conv3	biases	ApplyGradientDescent	0.0ms 0TOps 2GBs 0:(384) 1:(1) 2:(384)->(384)
+20000.0	GPU-0	tower_0	v	cg	dropout0_1	dropout	dropout	Floor	0.0ms 0TOps 210GBs 0:(128x4096)->(128x4096)
+23605.263157894737	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	conv1	conv2d	kernel	ApplyGradientDescent	0.0ms 0TOps 156GBs 0:(5x5x64x192) 1:(1) 2:(5x5x64x192)->(5x5x64x192)
+1604605.2631578948	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv0	Relu_grad	ReluGrad	1.6ms 0TOps 185GBs 0:(128x64x55x55) 1:(128x64x55x55)->(128x64x55x55)
+40842.10526315789	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine1	xw_plus_b_grad	BiasAddGrad	0.0ms 0TOps 52GBs 0:(128x4096)->(4096)
+2342.1052631578946	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	conv1	biases	ApplyGradientDescent	0.0ms 0TOps 1GBs 0:(192) 1:(1) 2:(192)->(192)
+9657.894736842105	CPU-0	global_step	0.0ms 0TOps 0GBs 0:(none)->(1)
+1447.3684210526317	GPU-0	tower_0	v	cg	conv0	Cast	0.0ms 0TOps 0GBs 0:(64)->(64) -DstT f16 -SrcT f32
+1977315.7894736845	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_10_grad	mul	2.0ms 0TOps 153GBs 0:(9216x4096) 1:(1)->(9216x4096)
+5703631.578947368	GPU-0	tower_0	v	cg	conv0	conv2d	Conv2D	5.7ms 3TOps 31GBs 0:(128x3x227x227) 1:(11x11x3x64)->(128x64x55x55)
+313710.5263157895	GPU-0	tower_0	v	gradients	AddN_1	0.3ms 0TOps 157GBs 0:(4096x1001) 1:(4096x1001)->(4096x1001) -N i: 2
+3000.0	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	affine1	biases	ApplyGradientDescent	0.0ms 0TOps 16GBs 0:(4096) 1:(1) 2:(4096)->(4096)
+2078.9473684210525	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv2	Cast_grad	Cast	0.0ms 0TOps 1GBs 0:(384)->(384) -DstT f32 -SrcT f16
+214763.15789473685	GPU-0	tower_0	v	mul_16	0.2ms 0TOps 153GBs 0:(4096x1001) 1:(1)->(4096x1001)
+541000.0	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv3	Relu_grad	ReluGrad	0.5ms 0TOps 184GBs 0:(128x384x13x13) 1:(128x384x13x13)->(128x384x13x13)
+100289.47368421053	GPU-0	tower_0	v	gradients	AddN_9	0.1ms 0TOps 159GBs 0:(3x3x384x384) 1:(3x3x384x384)->(3x3x384x384) -N i: 2
+2078.9473684210525	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_15_grad	mul	0.0ms 0TOps 4GBs 0:(1001) 1:(1)->(1001)
+1500.0	GPU-0	tower_0	v	cg	affine1	Cast_1	0.0ms 0TOps 22GBs 0:(4096)->(4096) -DstT f16 -SrcT f32
+873736.8421052633	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_12_grad	mul	0.9ms 0TOps 154GBs 0:(4096x4096) 1:(1)->(4096x4096)
+309815.7894736842	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	affine2	weights	ApplyGradientDescent	0.3ms 0TOps 159GBs 0:(4096x1001) 1:(1) 2:(4096x1001)->(4096x1001)
+8431894.736842105	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv3	conv2d	Conv2D_grad	Conv2DBackpropInput	8.4ms 7TOps 9GBs 0:(4) 1:(3x3x384x384) 2:(128x384x13x13)->(128x384x13x13)
+35105.26315789474	GPU-0	tower_0	v	mul_6	0.0ms 0TOps 151GBs 0:(3x3x192x384) 1:(1)->(3x3x192x384)
+1763.1578947368423	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_1_grad	mul	0.0ms 0TOps 0GBs 0:(64) 1:(1)->(64)
+5684.210526315789	GPU-0	tower_0	v	l2_loss	L2Loss	0.0ms 0TOps 16GBs 0:(11x11x3x64)->(1)
+1684.2105263157896	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_3_grad	mul	0.0ms 0TOps 1GBs 0:(192) 1:(1)->(192)
+6856000.0	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv0	conv2d	Conv2D_grad	Conv2DBackpropFilter	6.9ms 3TOps 26GBs 0:(128x3x227x227) 1:(4) 2:(128x64x55x55)->(11x11x3x64)
+1158052.6315789474	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv1	Relu_grad	ReluGrad	1.2ms 0TOps 186GBs 0:(128x192x27x27) 1:(128x192x27x27)->(128x192x27x27)
+23315.78947368421	GPU-0	tower_0	v	gradients	tower_0	v	cg	dropout0	dropout	dropout	div_grad	RealDiv	0.0ms 0TOps 270GBs 0:(128x4096) 1:(128x4096)->(128x4096)
+9000.0	CPU-0	loss_scale	0.0ms 0TOps 0GBs 0:(none)->(1)
+1973.6842105263158	GPU-0	tower_0	v	gradients	tower_0	v	xentropy	sparse_softmax_cross_entropy_loss	value_grad	Select	0.0ms 0TOps 0GBs 0:(1) 1:(1) 2:(1)->(1)
+2289.4736842105262	GPU-0	tower_0	v	l2_loss	L2Loss_9	0.0ms 0TOps 0GBs 0:(256)->(1)
+3000.0	GPU-0	tower_0	v	gradients	tower_0	v	Cast_grad	Cast	0.0ms 0TOps 342GBs 0:(128x1001)->(128x1001) -DstT f16 -SrcT f32
+18657.894736842107	GPU-0	tower_0	v	cg	dropout0	dropout	dropout	div	0.0ms 0TOps 225GBs 0:(1) 1:(128x4096)->(128x4096)
+339763.15789473685	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine2	xw_plus_b	MatMul_grad	MatMul_1	0.3ms 3TOps 56GBs 0:(128x4096) 1:(128x1001)->(4096x1001)
+74526.31578947368	GPU-0	tower_0	v	gradients	tower_0	v	cg	mpool2	MaxPool_grad	MaxPoolGrad-2-TransposeNHWCToNCHW-LayoutOptimizer	0.1ms 0TOps 127GBs 0:(128x6x6x256) 1:(4)->(128x256x6x6)
+1921.0526315789473	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv0	Cast_grad	Cast	0.0ms 0TOps 0GBs 0:(64)->(64) -DstT f32 -SrcT f16
+5378921.052631579	GPU-0	tower_0	v	cg	conv1	conv2d	Conv2D	5.4ms 11TOps 18GBs 0:(128x64x27x27) 1:(5x5x64x192)->(128x192x27x27)
+47921.05263157895	GPU-0	tower_0	v	mul_10	0.0ms 0TOps 148GBs 0:(3x3x384x256) 1:(1)->(3x3x384x256)
+2184.2105263157896	GPU-0	tower_0	v	xentropy	sparse_softmax_cross_entropy_loss	value	0.0ms 0TOps 0GBs 0:(1) 1:(1) 2:(1)->(1)
+1526.3157894736842	GPU-0	tower_0	v	cg	conv2	Cast	0.0ms 0TOps 2GBs 0:(384)->(384) -DstT f16 -SrcT f32
+523684.2105263158	GPU-0	tower_0	v	cg	conv3	BiasAdd	0.5ms 0TOps 127GBs 0:(128x384x13x13) 1:(384)->(128x384x13x13)
+918000.0	GPU-0	tower_0	v	l2_loss	L2Loss_10	0.9ms 0TOps 164GBs 0:(9216x4096)->(1)
+754710.5263157894	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine1	Cast_grad	Cast	0.8ms 0TOps 178GBs 0:(4096x4096)->(4096x4096) -DstT f32 -SrcT f16
+350263.15789473685	GPU-0	tower_0	v	cg	conv4	BiasAdd	0.4ms 0TOps 126GBs 0:(128x256x13x13) 1:(256)->(128x256x13x13)
+666763.1578947369	GPU-0	tower_0	v	cg	affine1	Cast	0.7ms 0TOps 201GBs 0:(4096x4096)->(4096x4096) -DstT f16 -SrcT f32
+2263.157894736842	GPU-0	tower_0	v	gradients	AddN	0.0ms 0TOps 5GBs 0:(1001) 1:(1001)->(1001) -N i: 2
+829026.3157894737	GPU-0	tower_0	v	gradients	tower_0	v	cg	mpool2	MaxPool_grad	MaxPoolGrad	0.8ms 0TOps 59GBs 0:(128x256x13x13) 1:(128x256x6x6) 2:(128x256x6x6)->(128x256x13x13)
+1947.3684210526317	GPU-0	tower_0	v	mul_7	0.0ms 0TOps 2GBs 0:(384) 1:(1)->(384)
+2105.2631578947367	GPU-0	tower_0	v	gradients	AddN_10	0.0ms 0TOps 2GBs 0:(384) 1:(384)->(384) -N i: 2
+53236.84210526316	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	conv2	conv2d	kernel	ApplyGradientDescent	0.1ms 0TOps 150GBs 0:(3x3x192x384) 1:(1) 2:(3x3x192x384)->(3x3x192x384)
+3315.78947368421	GPU-0	tower_0	v	l2_loss	L2Loss_15	0.0ms 0TOps 1GBs 0:(1001)->(1)
+1815.7894736842104	GPU-0	tower_0	v	gradients	tower_0	v	xentropy	sparse_softmax_cross_entropy_loss	div_grad	RealDiv	0.0ms 0TOps 0GBs 0:(1) 1:(1)->(1)
+2789.4736842105262	GPU-0	tower_0	v	gradients	AddN_4	0.0ms 0TOps 18GBs 0:(4096) 1:(4096)->(4096) -N i: 2
+4811236.842105263	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv1	conv2d	Conv2D_grad	Conv2DBackpropFilter	4.8ms 12TOps 20GBs 0:(128x64x27x27) 1:(4) 2:(128x192x27x27)->(5x5x64x192)
+2026.3157894736842	GPU-0	tower_0	v	gradients	AddN_14	0.0ms 0TOps 0GBs 0:(64) 1:(64)->(64) -N i: 2
+69815.78947368421	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_6_grad	mul	0.1ms 0TOps 152GBs 0:(3x3x384x384) 1:(1)->(3x3x384x384)
+15684.21052631579	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_2_grad	mul	0.0ms 0TOps 157GBs 0:(5x5x64x192) 1:(1)->(5x5x64x192)
+302605.2631578947	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv2	BiasAdd_grad	BiasAddGrad	0.3ms 0TOps 110GBs 0:(128x384x13x13)->(384)
+773289.4736842106	GPU-0	tower_0	v	cg	mpool1	MaxPool	0.8ms 0TOps 114GBs 0:(128x192x27x27)->(128x192x13x13)
+2078.9473684210525	GPU-0	tower_0	v	mul_11	0.0ms 0TOps 1GBs 0:(256) 1:(1)->(256)
+1246763.1578947369	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine1	xw_plus_b	MatMul_grad	MatMul	1.2ms 3TOps 57GBs 0:(128x4096) 1:(4096x4096)->(128x4096)
+1788184.2105263155	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine0	Cast_grad	Cast	1.8ms 0TOps 169GBs 0:(9216x4096)->(9216x4096) -DstT f32 -SrcT f16
+1149763.1578947369	GPU-0	tower_0	v	cg	conv1	BiasAdd	1.1ms 0TOps 125GBs 0:(128x192x27x27) 1:(192)->(128x192x27x27)
+2105.2631578947367	GPU-0	tower_0	v	mul_5	0.0ms 0TOps 1GBs 0:(192) 1:(1)->(192)
+2157.8947368421054	GPU-0	Cast	0.0ms 0TOps 86GBs 0:(11x11x3x64)->(11x11x3x64) -DstT f16 -SrcT f32
+6394.736842105263	GPU-0	tower_0	v	l2_loss	L2Loss_13	0.0ms 0TOps 3GBs 0:(4096)->(1)
+523815.7894736842	GPU-0	tower_0	v	cg	conv2	BiasAdd	0.5ms 0TOps 127GBs 0:(128x384x13x13) 1:(384)->(128x384x13x13)
+5474789.47368421	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv2	conv2d	Conv2D_grad	Conv2DBackpropFilter	5.5ms 5TOps 10GBs 0:(128x192x13x13) 1:(4) 2:(128x384x13x13)->(3x3x192x384)
+4868.421052631579	GPU-0	tower_0	v	l2_loss	AddN	0.0ms 0TOps 0GBs 0:(16x1)->(1) -N i: 16
+41473.68421052631	GPU-0	tower_0	v	l2_loss	L2Loss_6	0.0ms 0TOps 128GBs 0:(3x3x384x384)->(1)
+1274657.894736842	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	affine1	weights	ApplyGradientDescent	1.3ms 0TOps 158GBs 0:(4096x4096) 1:(1) 2:(4096x4096)->(4096x4096)
+1529157.894736842	GPU-0	tower_0	v	cg	affine0	Cast	1.5ms 0TOps 197GBs 0:(9216x4096)->(9216x4096) -DstT f16 -SrcT f32
+13842.105263157895	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine2	xw_plus_b_grad	BiasAddGrad	0.0ms 0TOps 37GBs 0:(128x1001)->(1001)
+2524657.8947368423	GPU-0	tower_0	v	cg	affine0	xw_plus_b	MatMul	2.5ms 4TOps 63GBs 0:(128x9216) 1:(9216x4096)->(128x4096)
+19657.894736842107	GPU-0	tower_0	v	l2_loss	L2Loss_2	0.0ms 0TOps 63GBs 0:(5x5x64x192)->(1)
+24342.105263157893	GPU-0	Cast_2	0.0ms 0TOps 218GBs 0:(3x3x192x384)->(3x3x192x384) -DstT f16 -SrcT f32
+1974894.7368421052	GPU-0	tower_0	v	mul_12	2.0ms 0TOps 153GBs 0:(9216x4096) 1:(1)->(9216x4096)
+2526.315789473684	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	conv2	biases	ApplyGradientDescent	0.0ms 0TOps 2GBs 0:(384) 1:(1) 2:(384)->(384)
+12342.105263157895	GPU-0	tower_0	v	mul_4	0.0ms 0TOps 199GBs 0:(5x5x64x192) 1:(1)->(5x5x64x192)
+65473.68421052631	GPU-0	tower_0	v	gradients	AddN_7	0.1ms 0TOps 162GBs 0:(3x3x384x256) 1:(3x3x384x256)->(3x3x384x256) -N i: 2
+18421.052631578947	GPU-0	tower_0	v	cg	dropout0_1	dropout	dropout	add	0.0ms 0TOps 228GBs 0:(1) 1:(128x4096)->(128x4096)
+24947.36842105263	GPU-0	tower_0	v	gradients	AddN_13	0.0ms 0TOps 148GBs 0:(5x5x64x192) 1:(5x5x64x192)->(5x5x64x192) -N i: 2
+2000.0	GPU-0	tower_0	v	xentropy	sparse_softmax_cross_entropy_loss	div	0.0ms 0TOps 0GBs 0:(1) 1:(1)->(1)
+1283842.105263158	GPU-0	tower_0	v	gradients	AddN_3	1.3ms 0TOps 157GBs 0:(4096x4096) 1:(4096x4096)->(4096x4096) -N i: 2
+1894.7368421052631	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine2	Cast_1_grad	Cast	0.0ms 0TOps 4GBs 0:(1001)->(1001) -DstT f32 -SrcT f16
+2000.0	GPU-0	tower_0	v	mul_2	0.0ms 0TOps 93GBs 0:(11x11x3x64) 1:(1)->(11x11x3x64)
+1342.1052631578948	GPU-0	tower_0	v	cg	conv3	Cast	0.0ms 0TOps 2GBs 0:(384)->(384) -DstT f16 -SrcT f32
+4846605.263157895	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv2	conv2d	Conv2D_grad	Conv2DBackpropInput	4.8ms 6TOps 11GBs 0:(4) 1:(3x3x192x384) 2:(128x384x13x13)->(128x192x13x13)
+3605.2631578947367	GPU-0	tower_0	v	gradients	AddN_15	0.0ms 0TOps 77GBs 0:(11x11x3x64) 1:(11x11x3x64)->(11x11x3x64) -N i: 2
+182131.57894736843	GPU-0	tower_0	v	xentropy	sparse_softmax_cross_entropy_loss	xentropy	xentropy	0.2ms 0TOps 6GBs 0:(128x1001) 1:(128)->(128)(128x1001)
+2157.8947368421054	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_13_grad	mul	0.0ms 0TOps 15GBs 0:(4096) 1:(1)->(4096)
+52473.68421052631	GPU-0	tower_0	v	gradients	AddN_11	0.1ms 0TOps 152GBs 0:(3x3x192x384) 1:(3x3x192x384)->(3x3x192x384) -N i: 2
+332394.7368421053	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine2	xw_plus_b	MatMul_grad	MatMul	0.3ms 3TOps 57GBs 0:(128x1001) 1:(4096x1001)->(128x4096)
+1947.3684210526317	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_11_grad	mul	0.0ms 0TOps 17GBs 0:(4096) 1:(1)->(4096)
+2789.4736842105262	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	affine2	biases	ApplyGradientDescent	0.0ms 0TOps 4GBs 0:(1001) 1:(1) 2:(1001)->(1001)
+2875236.8421052634	GPU-0	tower_0	v	gradients	AddN_5	2.9ms 0TOps 158GBs 0:(9216x4096) 1:(9216x4096)->(9216x4096) -N i: 2
+22000.0	GPU-0	tower_0	v	cg	dropout0	dropout	dropout	mul	0.0ms 0TOps 286GBs 0:(128x4096) 1:(128x4096)->(128x4096)
+2473.684210526316	GPU-0	tower_0	v	l2_loss	L2Loss_5	0.0ms 0TOps 1GBs 0:(384)->(1)
+488500.0	GPU-0	tower_0	v	cg	conv1	Relu	0.5ms 0TOps 293GBs 0:(128x192x27x27)->(128x192x27x27)
+2131.5789473684213	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine0	Cast_1_grad	Cast	0.0ms 0TOps 15GBs 0:(4096)->(4096) -DstT f32 -SrcT f16
+6030842.105263158	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv4	conv2d	Conv2D_grad	Conv2DBackpropInput	6.0ms 6TOps 10GBs 0:(4) 1:(3x3x384x256) 2:(128x256x13x13)->(128x384x13x13)
+873236.8421052633	GPU-0	tower_0	v	mul_14	0.9ms 0TOps 154GBs 0:(4096x4096) 1:(1)->(4096x4096)
+2500.0	GPU-0	tower_0	v	gradients	AddN_2	0.0ms 0TOps 20GBs 0:(4096) 1:(4096)->(4096) -N i: 2
+56842.10526315789	GPU-0	tower_0	v	gradients	Cast_3_grad	Cast	0.1ms 0TOps 187GBs 0:(3x3x384x384)->(3x3x384x384) -DstT f32 -SrcT f16
+2078.9473684210525	GPU-0	tower_0	v	gradients	AddN_6	0.0ms 0TOps 1GBs 0:(256) 1:(256)->(256) -N i: 2
+5761789.47368421	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv4	conv2d	Conv2D_grad	Conv2DBackpropFilter	5.8ms 7TOps 10GBs 0:(128x384x13x13) 1:(4) 2:(128x256x13x13)->(3x3x384x256)
+32157.894736842107	GPU-0	Cast_4	0.0ms 0TOps 220GBs 0:(3x3x384x256)->(3x3x384x256) -DstT f16 -SrcT f32
+103184.21052631579	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	conv3	conv2d	kernel	ApplyGradientDescent	0.1ms 0TOps 154GBs 0:(3x3x384x384) 1:(1) 2:(3x3x384x384)->(3x3x384x384)
+361684.2105263158	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv4	Relu_grad	ReluGrad	0.4ms 0TOps 184GBs 0:(128x256x13x13) 1:(128x256x13x13)->(128x256x13x13)
+2000.0	GPU-0	tower_0	v	l2_loss	L2Loss_3	0.0ms 0TOps 0GBs 0:(192)->(1)
+214526.31578947368	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_14_grad	mul	0.2ms 0TOps 153GBs 0:(4096x1001) 1:(1)->(4096x1001)
+18342.105263157893	GPU-0	tower_0	v	gradients	tower_0	v	cg	dropout0	dropout	dropout	mul_grad	Mul	0.0ms 0TOps 229GBs 0:(1) 1:(128x4096)->(128x4096)
+2000.0	GPU-0	tower_0	v	add	0.0ms 0TOps 0GBs 0:(1) 1:(1)->(1)
+223868.42105263157	GPU-0	tower_0	v	cg	conv3	Relu	0.2ms 0TOps 297GBs 0:(128x384x13x13)->(128x384x13x13)
+70578.94736842105	GPU-0	tower_0	v	mul_8	0.1ms 0TOps 150GBs 0:(3x3x384x384) 1:(1)->(3x3x384x384)
+46973.68421052631	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_8_grad	mul	0.0ms 0TOps 151GBs 0:(3x3x384x256) 1:(1)->(3x3x384x256)
+2789.4736842105262	CPU-0	inc_global_step	AssignAdd	value	0.0ms 0TOps 0GBs 0:(none)->(1)
+39605.26315789474	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine0	xw_plus_b_grad	BiasAddGrad	0.0ms 0TOps 53GBs 0:(128x4096)->(4096)
+18394.736842105263	GPU-0	tower_0	v	gradients	tower_0	v	cg	dropout0_1	dropout	dropout	mul_grad	Mul	0.0ms 0TOps 228GBs 0:(1) 1:(128x4096)->(128x4096)
+2736.842105263158	GPU-0	tower_0	v	gradients	tower_0	v	xentropy	sparse_softmax_cross_entropy_loss	Sum_grad	Tile	0.0ms 0TOps 0GBs 0:(1) 1:(1)->(128)
+1447.3684210526317	GPU-0	tower_0	v	cg	conv4	Cast	0.0ms 0TOps 1GBs 0:(256)->(256) -DstT f16 -SrcT f32
+6289.473684210527	GPU-0	tower_0	v	l2_loss	L2Loss_11	0.0ms 0TOps 3GBs 0:(4096)->(1)
+109736.84210526316	GPU-0	tower_0	v	l2_loss	L2Loss_14	0.1ms 0TOps 149GBs 0:(4096x1001)->(1)
+4179368.421052631	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv1	conv2d	Conv2D_grad	Conv2DBackpropInput	4.2ms 14TOps 23GBs 0:(4) 1:(5x5x64x192) 2:(128x192x27x27)->(128x64x27x27)
+5844368.421052632	GPU-0	tower_0	v	cg	conv4	conv2d	Conv2D	5.8ms 7TOps 10GBs 0:(128x384x13x13) 1:(3x3x384x256)->(128x256x13x13)
+1552.6315789473683	GPU-0	tower_0	v	cg	affine0	Cast_1	0.0ms 0TOps 21GBs 0:(4096)->(4096) -DstT f16 -SrcT f32
+160131.57894736843	GPU-0	tower_0	v	cg	affine2	Cast	0.2ms 0TOps 205GBs 0:(4096x1001)->(4096x1001) -DstT f16 -SrcT f32
+13473.684210526317	GPU-0	tower_0	v	gradients	Cast_1_grad	Cast	0.0ms 0TOps 182GBs 0:(5x5x64x192)->(5x5x64x192) -DstT f32 -SrcT f16
+2877631.5789473685	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	affine0	weights	ApplyGradientDescent	2.9ms 0TOps 157GBs 0:(9216x4096) 1:(1) 2:(9216x4096)->(9216x4096)
+1763.1578947368423	GPU-0	tower_0	v	cg	affine2	Cast_1	0.0ms 0TOps 5GBs 0:(1001)->(1001) -DstT f16 -SrcT f32
+2805447.3684210526	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine0	xw_plus_b	MatMul_grad	MatMul	2.8ms 3TOps 56GBs 0:(128x4096) 1:(9216x4096)->(128x9216)
+1657.894736842105	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_9_grad	mul	0.0ms 0TOps 1GBs 0:(256) 1:(1)->(256)
+1657.894736842105	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_5_grad	mul	0.0ms 0TOps 2GBs 0:(384) 1:(1)->(384)
+69342.1052631579	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	conv4	conv2d	kernel	ApplyGradientDescent	0.1ms 0TOps 153GBs 0:(3x3x384x256) 1:(1) 2:(3x3x384x256)->(3x3x384x256)
+5184.210526315789	GPU-0	tower_0	v	gradients	tower_0	v	xentropy	sparse_softmax_cross_entropy_loss	xentropy	xentropy_grad	mul	0.0ms 0TOps 198GBs 0:(128) 1:(128x1001)->(128x1001)
+6131.578947368421	GPU-0	tower_0	v	cg	affine0	affine0	0.0ms 0TOps 684GBs 0:(128x4096)->(128x4096)
+34894.73684210526	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine1	affine1_grad	ReluGrad	0.0ms 0TOps 180GBs 0:(128x4096) 1:(128x4096)->(128x4096)
+330447.36842105264	GPU-0	tower_0	v	cg	affine2	xw_plus_b	MatMul	0.3ms 3TOps 58GBs 0:(128x4096) 1:(4096x1001)->(128x1001)
+18342.105263157893	GPU-0	tower_0	v	cg	dropout0	dropout	dropout	add	0.0ms 0TOps 229GBs 0:(1) 1:(128x4096)->(128x4096)
+2078.9473684210525	GPU-0	tower_0	v	gradients	Cast_grad	Cast	0.0ms 0TOps 89GBs 0:(11x11x3x64)->(11x11x3x64) -DstT f32 -SrcT f16
+1578.9473684210527	GPU-0	tower_0	v	cg	conv1	Cast	0.0ms 0TOps 1GBs 0:(192)->(192) -DstT f16 -SrcT f32
+1236.842105263158	CPU-0	_SOURCE	0.0ms 0TOps 0GBs 0:(none)->(none)
+37578.94736842105	GPU-0	tower_0	v	gradients	Cast_4_grad	Cast	0.0ms 0TOps 188GBs 0:(3x3x384x256)->(3x3x384x256) -DstT f32 -SrcT f16
+19131.57894736842	GPU-0	tower_0	v	cg	dropout0	dropout	dropout	Floor	0.0ms 0TOps 219GBs 0:(128x4096)->(128x4096)
+9815.78947368421	GPU-0	Cast_1	0.0ms 0TOps 250GBs 0:(5x5x64x192)->(5x5x64x192) -DstT f16 -SrcT f32
+34526.31578947369	GPU-0	tower_0	v	cg	affine1	xw_plus_b	0.0ms 0TOps 122GBs 0:(128x4096) 1:(4096)->(128x4096)
+2026.3157894736842	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv1	Cast_grad	Cast	0.0ms 0TOps 1GBs 0:(192)->(192) -DstT f32 -SrcT f16
+1330105.2631578948	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine1	xw_plus_b	MatMul_grad	MatMul_1	1.3ms 3TOps 54GBs 0:(128x4096) 1:(128x4096)->(4096x4096)
+21578.947368421053	GPU-0	tower_0	v	cg	dropout0_1	dropout	dropout	mul	0.0ms 0TOps 292GBs 0:(128x4096) 1:(128x4096)->(128x4096)
+1250736.8421052631	GPU-0	tower_0	v	gradients	tower_0	v	cg	mpool1	MaxPool_grad	MaxPoolGrad	1.3ms 0TOps 128GBs 0:(128x192x27x27) 1:(128x192x13x13) 2:(128x192x13x13)->(128x192x27x27)
+1644473.6842105265	GPU-0	tower_0	v	cg	conv0	BiasAdd	1.6ms 0TOps 121GBs 0:(128x64x55x55) 1:(64)->(128x64x55x55)
+23131.57894736842	GPU-0	tower_0	v	gradients	tower_0	v	cg	dropout0_1	dropout	dropout	div_grad	RealDiv	0.0ms 0TOps 272GBs 0:(128x4096) 1:(128x4096)->(128x4096)
+18736.842105263157	GPU-0	tower_0	v	cg	dropout0_1	dropout	dropout	div	0.0ms 0TOps 224GBs 0:(1) 1:(128x4096)->(128x4096)
+1139578.9473684211	GPU-0	tower_0	v	cg	affine1	xw_plus_b	MatMul	1.1ms 4TOps 63GBs 0:(128x4096) 1:(4096x4096)->(128x4096)
+2210.5263157894738	GPU-0	tower_0	v	mul	0.0ms 0TOps 0GBs 0:(1) 1:(1)->(1)
+70684.21052631579	GPU-0	tower_0	v	cg	mpool2	MaxPool-0-0-TransposeNCHWToNHWC-LayoutOptimizer	0.1ms 0TOps 134GBs 0:(128x256x6x6) 1:(4)->(128x6x6x256)
+2184.2105263157896	GPU-0	tower_0	v	mul_9	0.0ms 0TOps 1GBs 0:(384) 1:(1)->(384)
+539236.8421052631	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv2	Relu_grad	ReluGrad	0.5ms 0TOps 185GBs 0:(128x384x13x13) 1:(128x384x13x13)->(128x384x13x13)
+4960815.7894736845	GPU-0	tower_0	v	cg	conv2	conv2d	Conv2D	5.0ms 6TOps 11GBs 0:(128x192x13x13) 1:(3x3x192x384)->(128x384x13x13)
+247052.63157894736	GPU-0	tower_0	v	cg	mpool2	MaxPool	0.2ms 0TOps 109GBs 0:(128x256x13x13)->(128x256x6x6)
+2368.4210526315787	GPU-0	tower_0	v	l2_loss	L2Loss_7	0.0ms 0TOps 1GBs 0:(384)->(1)
+2421.0526315789475	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_grad	mul	0.0ms 0TOps 77GBs 0:(11x11x3x64) 1:(1)->(11x11x3x64)
+40684.21052631579	GPU-0	tower_0	v	cg	dropout0_1	dropout	dropout	random_uniform	RandomUniform	0.0ms 0TOps 52GBs 0:(2)->(128x4096)
+149289.47368421053	GPU-0	tower_0	v	cg	conv4	Relu	0.1ms 0TOps 297GBs 0:(128x256x13x13)->(128x256x13x13)
+27868.42105263158	GPU-0	tower_0	v	gradients	Cast_2_grad	Cast	0.0ms 0TOps 190GBs 0:(3x3x192x384)->(3x3x192x384) -DstT f32 -SrcT f16
+34763.15789473684	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_4_grad	mul	0.0ms 0TOps 153GBs 0:(3x3x192x384) 1:(1)->(3x3x192x384)
+1896368.4210526315	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv0	conv2d	Conv2D_grad	Conv2DBackpropFilter-0-TransposeNHWCToNCHW-LayoutOptimizer	1.9ms 0TOps 83GBs 0:(128x227x227x3) 1:(4)->(128x3x227x227)
+2000.0	GPU-0	tower_0	v	gradients	tower_0	v	mul_grad	Mul_1	0.0ms 0TOps 0GBs 0:(1) 1:(1)->(1)
+2973.684210526316	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	affine0	biases	ApplyGradientDescent	0.0ms 0TOps 17GBs 0:(4096) 1:(1) 2:(4096)->(4096)
+39236.84210526316	GPU-0	tower_0	v	cg	dropout0	dropout	dropout	random_uniform	RandomUniform	0.0ms 0TOps 53GBs 0:(2)->(128x4096)
+947.3684210526316	CPU-0	_retval_inc_global_step	AssignAdd_0_1	0.0ms 0TOps 0GBs 0:(1)->(none)
+224052.63157894736	GPU-0	tower_0	v	cg	conv2	Relu	0.2ms 0TOps 297GBs 0:(128x384x13x13)->(128x384x13x13)
+8157.894736842105	GPU-0	tower_0	v	alexnet_synthetic_labels	0.0ms 0TOps 0GBs 0:(1) 1:(1) 2:(1)->(128)
+2210.5263157894738	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine1	Cast_1_grad	Cast	0.0ms 0TOps 15GBs 0:(4096)->(4096) -DstT f32 -SrcT f16
+172710.52631578947	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine2	Cast_grad	Cast	0.2ms 0TOps 190GBs 0:(4096x1001)->(4096x1001) -DstT f32 -SrcT f16
+303447.36842105264	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv3	BiasAdd_grad	BiasAddGrad	0.3ms 0TOps 110GBs 0:(128x384x13x13)->(384)
+2131.5789473684213	GPU-0	tower_0	v	gradients	AddN_8	0.0ms 0TOps 2GBs 0:(384) 1:(384)->(384) -N i: 2
+35184.21052631579	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine0	affine0_grad	ReluGrad	0.0ms 0TOps 179GBs 0:(128x4096) 1:(128x4096)->(128x4096)
+2289.4736842105262	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	conv4	biases	ApplyGradientDescent	0.0ms 0TOps 1GBs 0:(256) 1:(1) 2:(256)->(256)
+9048394.736842105	GPU-0	tower_0	v	cg	conv3	conv2d	Conv2D	9.0ms 6TOps 8GBs 0:(128x384x13x13) 1:(3x3x384x384)->(128x384x13x13)
+895815.7894736843	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv0	BiasAdd_grad	BiasAddGrad	0.9ms 0TOps 111GBs 0:(128x64x55x55)->(64)
+30789.473684210523	GPU-0	tower_0	v	l2_loss	L2Loss_8	0.0ms 0TOps 115GBs 0:(3x3x384x256)->(1)
+3026289.4736842103	GPU-0	tower_0	v	gradients	tower_0	v	cg	affine0	xw_plus_b	MatMul_grad	MatMul_1	3.0ms 3TOps 52GBs 0:(128x9216) 1:(128x4096)->(9216x4096)
+2052.6315789473683	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv3	Cast_grad	Cast	0.0ms 0TOps 1GBs 0:(384)->(384) -DstT f32 -SrcT f16
+2842.1052631578946	GPU-0	append_apply_gradient_ops	GradientDescent	update_v	cg	conv0	conv2d	kernel	ApplyGradientDescent	0.0ms 0TOps 98GBs 0:(11x11x3x64) 1:(1) 2:(11x11x3x64)->(11x11x3x64)
+413421.0526315789	GPU-0	tower_0	v	l2_loss	L2Loss_12	0.4ms 0TOps 162GBs 0:(4096x4096)->(1)
+2447.3684210526317	GPU-0	tower_0	v	mul_17	0.0ms 0TOps 3GBs 0:(1001) 1:(1)->(1001)
+10500.0	GPU-0	tower_0	v	cg	affine2	xw_plus_b	0.0ms 0TOps 98GBs 0:(128x1001) 1:(1001)->(128x1001)
+8261947.368421053	GPU-0	tower_0	v	gradients	tower_0	v	cg	conv3	conv2d	Conv2D_grad	Conv2DBackpropFilter	8.3ms 7TOps 9GBs 0:(128x384x13x13) 1:(4) 2:(128x384x13x13)->(3x3x384x384)
+1368.421052631579	CPU-0	loss_scale	read	0.0ms 0TOps 0GBs 0:(1)->(1)
+2500.0	GPU-0	tower_0	v	mul_13	0.0ms 0TOps 13GBs 0:(4096) 1:(1)->(4096)
+1710.5263157894738	GPU-0	tower_0	v	gradients	tower_0	v	l2_loss	L2Loss_7_grad	mul	0.0ms 0TOps 2GBs 0:(384) 1:(1)->(384)
+1442710.5263157894	GPU-0	tower_0	v	gradients	tower_0	v	cg	mpool0	MaxPool_grad	MaxPoolGrad	1.4ms 0TOps 154GBs 0:(128x64x55x55) 1:(128x64x27x27) 2:(128x64x27x27)->(128x64x55x55)
+1736.8421052631577	GPU-0	tower_0	v	mul_3	0.0ms 0TOps 0GBs 0:(64) 1:(1)->(64)
+3473.6842105263154	CPU-0	inc_global_step	AssignAdd	0.0ms 0TOps 0GBs 0:(1) 1:(1)->(1)
